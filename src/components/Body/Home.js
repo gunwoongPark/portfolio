@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import jumbImg from "./assets/jumbotron.jpg";
+import jumbImg from "../../assets/jumbotron.jpg";
 
 const JumbotronContainer = styled.div`
   position: relative;
