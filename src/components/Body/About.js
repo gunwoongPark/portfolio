@@ -29,6 +29,11 @@ const PhotoContainer = styled.div`
   align-self: center;
 `;
 
+const IntroduceText = styled.p`
+  text-align: center;
+  font-size: 20px;
+`;
+
 function About() {
   return (
     <Container>
@@ -94,6 +99,20 @@ function About() {
               </div>
             </li>
           </ContentContainer>
+        </Col>
+      </Row>
+      <Row className="mt-5 mb-5">
+        <Col style={{ textAlign: "center" }}>
+          <IntroduceText>
+            안녕하세요. 코딩을 통해 웹을 그리는 것에 재미를 느껴 프론트엔드
+            개발자의 길을 걸었습니다.
+            <br />
+            발전하는 기술의 흐름 속에서, 그것에 적응하고 더 좋은 개발자가 되고
+            싶어 달려가고 있습니다.
+            <br />
+            자신의 일을 좋아하는 열정있는 개발자 입니다! 저에 대해 궁금하신 점이
+            있다면, 위의 주소로 연락주세요!
+          </IntroduceText>
         </Col>
       </Row>
     </Container>
