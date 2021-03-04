@@ -18,7 +18,7 @@ function SkillsPresenter({ skills }) {
           </Col>
         </Row>
 
-        <Row className="mt-5">
+        <Row className="mt-5 mb-5">
           {skills.map((skill, index) => (
             <Col md={2} sm={3} xs={4}>
               <SkillContainer>

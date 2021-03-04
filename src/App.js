@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Body/Home";
 import About from "./components/Body/About";
 import Skills from "./components/Body/Skill/SkillsContainer";
+import Project from "./components/Body/Project/ProjectContainer";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -19,6 +20,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Project />
       <Footer />
     </>
   );
