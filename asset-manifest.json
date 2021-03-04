@@ -1,23 +1,32 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/portfolio/static/js/main.133edc60.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.133edc60.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.94ab54dd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.94ab54dd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.227399cc.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.227399cc.js.map",
-    "static/js/2.68cf27dd.chunk.js": "/portfolio/static/js/2.68cf27dd.chunk.js",
-    "static/js/2.68cf27dd.chunk.js.map": "/portfolio/static/js/2.68cf27dd.chunk.js.map",
+    "static/js/2.be08904e.chunk.js": "/portfolio/static/js/2.be08904e.chunk.js",
+    "static/js/2.be08904e.chunk.js.map": "/portfolio/static/js/2.be08904e.chunk.js.map",
     "static/js/3.25bae2b7.chunk.js": "/portfolio/static/js/3.25bae2b7.chunk.js",
     "static/js/3.25bae2b7.chunk.js.map": "/portfolio/static/js/3.25bae2b7.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/main.2ae47eeb.chunk.css.map": "/portfolio/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.68cf27dd.chunk.js.LICENSE.txt": "/portfolio/static/js/2.68cf27dd.chunk.js.LICENSE.txt",
-    "static/media/jumbotron.b2f3b330.jpg": "/portfolio/static/media/jumbotron.b2f3b330.jpg"
+    "static/js/2.be08904e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.be08904e.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.5d30db8d.svg": "/portfolio/static/media/bootstrap.5d30db8d.svg",
+    "static/media/css.5491a3b0.png": "/portfolio/static/media/css.5491a3b0.png",
+    "static/media/html.397540de.png": "/portfolio/static/media/html.397540de.png",
+    "static/media/jumbotron.b2f3b330.jpg": "/portfolio/static/media/jumbotron.b2f3b330.jpg",
+    "static/media/react.b37f0a4b.png": "/portfolio/static/media/react.b37f0a4b.png",
+    "static/media/redux.7fec6369.png": "/portfolio/static/media/redux.7fec6369.png",
+    "static/media/sass.d854f0ed.png": "/portfolio/static/media/sass.d854f0ed.png",
+    "static/media/typescript.8fe41361.png": "/portfolio/static/media/typescript.8fe41361.png",
+    "static/media/vue.fad25953.png": "/portfolio/static/media/vue.fad25953.png",
+    "static/media/vuetify.4802839b.svg": "/portfolio/static/media/vuetify.4802839b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.227399cc.js",
-    "static/js/2.68cf27dd.chunk.js",
+    "static/js/2.be08904e.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.133edc60.chunk.js"
+    "static/js/main.94ab54dd.chunk.js"
   ]
 }
