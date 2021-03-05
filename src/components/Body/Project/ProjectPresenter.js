@@ -6,6 +6,7 @@ import reactIcon from "../../../assets/react.png";
 const ProjectContainer = styled.div`
   display: flex;
   background: white;
+  border-radius: 1rem;
 `;
 
 const ProjectImage = styled.img`
@@ -31,7 +32,10 @@ function ProjectPresenter() {
           <Col>
             <ProjectContainer>
               <ProjectImage src={reactIcon} />
-              <ProjectInfo>test2</ProjectInfo>
+              <ProjectInfo>
+                <h4>프로젝트 이름</h4>
+                <p>프로젝트 소개</p>
+              </ProjectInfo>
             </ProjectContainer>
           </Col>
         </Row>
