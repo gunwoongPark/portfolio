@@ -27,24 +27,10 @@ const ProjectInfo = styled.div`
   padding: 12px;
 `;
 
-const CarouselContainer = styled.div``;
-const InfoContainer = styled.div``;
-
 function ProjectPresenter(props) {
   return (
     <>
       <hr />
-      <Modal
-        show={props.show}
-        onHide={props.onHide}
-        dialogClassName="modal-90w"
-        centered
-      >
-        <Modal.Body>
-          <CarouselContainer></CarouselContainer>
-          <InfoContainer>test</InfoContainer>
-        </Modal.Body>
-      </Modal>
 
       <Container>
         <Row className="mt-5 title">

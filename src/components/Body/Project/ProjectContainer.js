@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import ProjectPresenter from "./ProjectPresenter";
 
 function ProjectContainer() {
-  const [dialogShow, setDialogShow] = useState(false);
-  const [curProject, setCurProject] = useState(null);
-  const onClick = () => setDialogShow(true);
-  const onHide = () => setDialogShow(false);
-
   const projects = [
     {
       id: 1,
@@ -23,13 +18,7 @@ function ProjectContainer() {
 
   return (
     <>
-      <ProjectPresenter
-        onClick={onClick}
-        projects={projects}
-        show={dialogShow}
-        onHide={onHide}
-      />
-      ;
+      <ProjectPresenter projects={projects} />;
     </>
   );
 }
