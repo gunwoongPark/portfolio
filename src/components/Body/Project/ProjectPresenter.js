@@ -1,12 +1,19 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal } from "react-bootstrap";
 import styled from "styled-components";
 import reactIcon from "../../../assets/react.png";
+import "./modalStyling.css";
 
 const ProjectContainer = styled.div`
   display: flex;
   background: white;
   border-radius: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 10px gray;
+    transition-duration: 0.4s;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -14,13 +21,31 @@ const ProjectImage = styled.img`
 `;
 
 const ProjectInfo = styled.div`
+  text-align: center;
+  place-self: center;
+  margin: 0 auto;
   padding: 12px;
 `;
 
-function ProjectPresenter() {
+const CarouselContainer = styled.div``;
+const InfoContainer = styled.div``;
+
+function ProjectPresenter(props) {
   return (
     <>
       <hr />
+      <Modal
+        show={props.show}
+        onHide={props.onHide}
+        dialogClassName="modal-90w"
+        centered
+      >
+        <Modal.Body>
+          <CarouselContainer></CarouselContainer>
+          <InfoContainer>test</InfoContainer>
+        </Modal.Body>
+      </Modal>
+
       <Container>
         <Row className="mt-5 title">
           <Col>
@@ -28,17 +53,19 @@ function ProjectPresenter() {
           </Col>
         </Row>
 
-        <Row className="mt-5 mb-5">
-          <Col>
-            <ProjectContainer>
-              <ProjectImage src={reactIcon} />
-              <ProjectInfo>
-                <h4>프로젝트 이름</h4>
-                <p>프로젝트 소개</p>
-              </ProjectInfo>
-            </ProjectContainer>
-          </Col>
-        </Row>
+        {props.projects.map((project, index) => (
+          <Row className="mt-5 mb-5">
+            <Col>
+              <ProjectContainer onClick={props.onClick}>
+                <ProjectImage src={reactIcon} />
+                <ProjectInfo>
+                  <h1>{project.name}</h1>
+                  <h4>{project.info}</h4>
+                </ProjectInfo>
+              </ProjectContainer>
+            </Col>
+          </Row>
+        ))}
       </Container>
     </>
   );

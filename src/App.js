@@ -5,11 +5,16 @@ import About from "./components/Body/About";
 import Skills from "./components/Body/Skill/SkillsContainer";
 import Project from "./components/Body/Project/ProjectContainer";
 import { createGlobalStyle } from "styled-components";
-import Media from "./MediaQuery";
+// import Media from "./MediaQuery";
 
 const GlobalStyle = createGlobalStyle`
 body{
+  -ms-overflow-style: none; 
   background: #e9ecef; 
+}
+
+body::-webkit-scrollbar{
+  display:none;
 }
 `;
 
@@ -23,7 +28,7 @@ function App() {
       <Skills />
       <Project />
       <Footer />
-      <Media />
+      {/* <Media /> */}
     </>
   );
 }
