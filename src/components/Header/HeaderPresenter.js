@@ -37,10 +37,9 @@ function HeaderPresenter() {
       <HeaderContainer>
         <Title>gunwoongPark</Title>
         <LinkBtnContainer>
-          <LinkBtn>test</LinkBtn>
-          <LinkBtn>test</LinkBtn>
-          <LinkBtn>test</LinkBtn>
-          <LinkBtn>test</LinkBtn>
+          <LinkBtn>About</LinkBtn>
+          <LinkBtn>Skills</LinkBtn>
+          <LinkBtn>Project</LinkBtn>
         </LinkBtnContainer>
       </HeaderContainer>
     </>
