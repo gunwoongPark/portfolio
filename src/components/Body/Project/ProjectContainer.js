@@ -11,7 +11,7 @@ function ProjectContainer() {
   const projects = [
     {
       id: 1,
-      name: "셈틀꾼 공식 홈페이지 구현2",
+      name: "셈틀꾼 공식 홈페이지 구현",
       info: "셈틀꾼 회원들이 사용할 수 있는 공식 홈페이지 구현",
       image: [img1, img2, img3, img4, img5],
     },
