@@ -46,7 +46,7 @@ function ProjectPresenter(props) {
     <>
       <hr />
 
-      <Container>
+      <Container id="Project" style={{ marginTop: "120px" }}>
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>Project</h1>
@@ -54,13 +54,13 @@ function ProjectPresenter(props) {
         </Row>
 
         {props.projects.map((project, index) => (
-          <Row className="mt-5 mb-5">
+          <Row className="mt-5 mb-5" key={index}>
             <Col>
               <ProjectContainer>
                 <CarouselContainer className="mb-3 ">
                   <Slider {...settings}>
                     {project.image.map((img, index) => (
-                      <CarouselItem className="mt-3">
+                      <CarouselItem className="mt-3" key={index}>
                         <ProjectImage src={img} />
                       </CarouselItem>
                     ))}

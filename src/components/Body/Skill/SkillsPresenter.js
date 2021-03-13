@@ -11,7 +11,7 @@ function SkillsPresenter({ skills }) {
   return (
     <>
       <hr />
-      <Container>
+      <Container id="Skills" style={{ marginTop: "120px" }}>
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>Skills</h1>
@@ -20,7 +20,7 @@ function SkillsPresenter({ skills }) {
 
         <Row className="mt-5 mb-5">
           {skills.map((skill, index) => (
-            <Col md={2} sm={3} xs={4}>
+            <Col md={2} sm={3} xs={4} key={index}>
               <SkillContainer>
                 <img
                   src={skills[index].icon}

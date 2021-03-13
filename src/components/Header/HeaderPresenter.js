@@ -18,7 +18,7 @@ const Title = styled.h1`
   margin-left: 50px;
 `;
 
-const LinkBtnContainer = styled.ul`
+const LinkContainer = styled.ul`
   display: flex;
   list-style: none;
   margin: 0 50px 0 0;
@@ -31,16 +31,31 @@ const LinkBtn = styled.li`
   font-size: 20px;
 `;
 
+const LinkItem = styled.a`
+  color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+`;
+
 function HeaderPresenter() {
   return (
     <>
       <HeaderContainer>
         <Title>gunwoongPark</Title>
-        <LinkBtnContainer>
-          <LinkBtn>About</LinkBtn>
-          <LinkBtn>Skills</LinkBtn>
-          <LinkBtn>Project</LinkBtn>
-        </LinkBtnContainer>
+        <LinkContainer>
+          <LinkBtn>
+            <LinkItem href="#About">About</LinkItem>
+          </LinkBtn>
+          <LinkBtn>
+            <LinkItem href="#Skills">Skills</LinkItem>
+          </LinkBtn>
+          <LinkBtn>
+            <LinkItem href="#Project">Project</LinkItem>
+          </LinkBtn>
+        </LinkContainer>
       </HeaderContainer>
     </>
   );

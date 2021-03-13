@@ -23,9 +23,9 @@ function App() {
       <GlobalStyle />
       <Header />
       <Home />
-      <About />
-      <Skills />
-      <Project />
+      <About id="About" />
+      <Skills id="Skills" />
+      <Project id="Project" />
       <Footer />
     </>
   );
