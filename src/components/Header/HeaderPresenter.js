@@ -47,6 +47,9 @@ function HeaderPresenter() {
         <Title>gunwoongPark</Title>
         <LinkContainer>
           <LinkBtn>
+            <LinkItem href="#Home">Home</LinkItem>
+          </LinkBtn>
+          <LinkBtn>
             <LinkItem href="#About">About</LinkItem>
           </LinkBtn>
           <LinkBtn>

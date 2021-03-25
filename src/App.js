@@ -7,6 +7,10 @@ import Project from "./components/Body/Project/ProjectContainer";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   -ms-overflow-style: none; 
   background: #e9ecef; 

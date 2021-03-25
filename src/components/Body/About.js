@@ -36,7 +36,7 @@ const IntroduceText = styled.p`
 
 function About() {
   return (
-    <Container id="About" style={{ marginTop: "120px" }}>
+    <Container id="About" style={{ marginTop: "70px", paddingTop: "50px" }}>
       <Row className="mt-5 title">
         <Col>
           <h1 style={{ fontSize: "45px" }}>About</h1>
