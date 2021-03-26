@@ -30,10 +30,9 @@ const LinkBtn = styled.li`
   margin-left: 20px;
   font-size: 20px;
 
-  border-bottom: 3px solid
-    ${(props) => (props.current ? "rgb(41, 45, 62)" : "white")};
+  border-bottom: 3px solid ${(props) => (props.current ? "black" : "white")};
 
-  transition: border-bottom 0.3s ease-in;
+  transition: border-bottom 0.2s ease-in;
 `;
 
 const LinkItem = styled.a`

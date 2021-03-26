@@ -9289,7 +9289,7 @@ react-refresh@^0.8.3:
 
 react-responsive@^8.2.0:
   version "8.2.0"
-  resolved "https://registry.npmjs.org/react-responsive/-/react-responsive-8.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-responsive/-/react-responsive-8.2.0.tgz#e0ffb306cfd8f38c9c12e26725b9e1245fa9debc"
   integrity sha512-iagCqVrw4QSjhxKp3I/YK6+ODkWY6G+YPElvdYKiUUbywwh9Ds0M7r26Fj2/7dWFFbOpcGnJE6uE7aMck8j5Qg==
   dependencies:
     hyphenate-style-name "^1.0.0"
