@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
@@ -29,6 +29,7 @@ const LinkBtn = styled.li`
   padding: 10px;
   margin-left: 20px;
   font-size: 20px;
+  /* border-bottom: 2px solid rgb(41, 45, 62); */
 `;
 
 const LinkItem = styled.a`
@@ -40,7 +41,16 @@ const LinkItem = styled.a`
   }
 `;
 
-function HeaderPresenter() {
+function HeaderPresenter({ scrollState, setScrollState }) {
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let newState = scrollState;
+      newState.cur = window.scrollY;
+      setScrollState(newState);
+      console.log(newState.cur);
+    });
+  }, [scrollState, setScrollState]);
+
   return (
     <>
       <HeaderContainer>

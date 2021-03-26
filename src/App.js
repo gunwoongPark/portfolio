@@ -26,7 +26,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Home />
+      <Home id="Home" />
       <About id="About" />
       <Skills id="Skills" />
       <Project id="Project" />
