@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
@@ -29,7 +29,9 @@ const LinkBtn = styled.li`
   padding: 10px;
   margin-left: 20px;
   font-size: 20px;
-  /* border-bottom: 2px solid rgb(41, 45, 62); */
+
+  border-bottom: 3px solid
+    ${(props) => (props.current ? "rgb(41, 45, 62)" : "white")};
 `;
 
 const LinkItem = styled.a`
@@ -41,31 +43,22 @@ const LinkItem = styled.a`
   }
 `;
 
-function HeaderPresenter({ scrollState, setScrollState }) {
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      let newState = scrollState;
-      newState.cur = window.scrollY;
-      setScrollState(newState);
-      console.log(newState.cur);
-    });
-  }, [scrollState, setScrollState]);
-
+function HeaderPresenter({ Home, About, Skills, Project, pos }) {
   return (
     <>
       <HeaderContainer>
         <Title>gunwoongPark</Title>
         <LinkContainer>
-          <LinkBtn>
+          <LinkBtn current={pos >= Home.top && pos <= Home.bottom}>
             <LinkItem href="#Home">Home</LinkItem>
           </LinkBtn>
-          <LinkBtn>
+          <LinkBtn current={pos >= About.top && pos <= About.bottom}>
             <LinkItem href="#About">About</LinkItem>
           </LinkBtn>
-          <LinkBtn>
+          <LinkBtn current={pos >= Skills.top && pos <= Skills.bottom}>
             <LinkItem href="#Skills">Skills</LinkItem>
           </LinkBtn>
-          <LinkBtn>
+          <LinkBtn current={pos >= Project.top}>
             <LinkItem href="#Project">Project</LinkItem>
           </LinkBtn>
         </LinkContainer>

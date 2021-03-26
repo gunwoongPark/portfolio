@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import HeaderPresenter from "./HeaderPresenter";
 
 function HeaderContainer() {
-  let [scrollState, setScrollState] = useState({
+  let [pos, setPos] = useState(0);
+  let [state, setState] = useState({
     Home: {
       top: 0,
       bottom: 0,
@@ -19,17 +20,17 @@ function HeaderContainer() {
       top: 0,
       bottom: 0,
     },
-
-    cur: 0,
   });
 
   useEffect(() => {
-    let newState = scrollState;
+    window.addEventListener("scroll", () => setPos(window.scrollY));
 
     const Home = document.querySelector("#Home");
     const About = document.querySelector("#About");
     const Skills = document.querySelector("#Skills");
     const Project = document.querySelector("#Project");
+
+    let newState = state;
 
     newState.Home = {
       top: Home.offsetTop,
@@ -51,16 +52,19 @@ function HeaderContainer() {
       bottom: Project.offsetTop + Project.offsetHeight,
     };
 
-    newState.cur = window.scrollY;
-
-    setScrollState(newState);
-  }, [scrollState]);
+    setState(newState);
+  }, [state]);
 
   return (
-    <HeaderPresenter
-      scrollState={scrollState}
-      setScrollState={setScrollState}
-    />
+    <>
+      <HeaderPresenter
+        Home={state.Home}
+        About={state.About}
+        Skills={state.Skills}
+        Project={state.Project}
+        pos={pos}
+      />
+    </>
   );
 }
 
