@@ -32,6 +32,8 @@ const LinkBtn = styled.li`
 
   border-bottom: 3px solid
     ${(props) => (props.current ? "rgb(41, 45, 62)" : "white")};
+
+  transition: border-bottom 0.3s ease-in;
 `;
 
 const LinkItem = styled.a`
@@ -49,7 +51,7 @@ function HeaderPresenter({ Home, About, Skills, Project, pos }) {
       <HeaderContainer>
         <Title>gunwoongPark</Title>
         <LinkContainer>
-          <LinkBtn current={pos >= Home.top && pos <= Home.bottom}>
+          <LinkBtn current={pos <= Home.bottom}>
             <LinkItem href="#Home">Home</LinkItem>
           </LinkBtn>
           <LinkBtn current={pos >= About.top && pos <= About.bottom}>
