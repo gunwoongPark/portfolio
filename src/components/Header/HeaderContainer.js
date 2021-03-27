@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import HeaderPresenter from "./HeaderPresenter";
 
 function HeaderContainer() {
-  let [pos, setPos] = useState(0);
+  let [pos, setPos] = useState(-1);
   let [state, setState] = useState({
     Home: {
       top: 0,
@@ -34,17 +34,17 @@ function HeaderContainer() {
 
     newState.Home = {
       top: Home.offsetTop,
-      bottom: Home.offsetTop + Home.offsetHeight,
+      bottom: Home.offsetTop + Home.offsetHeight + 60,
     };
 
     newState.About = {
       top: About.offsetTop,
-      bottom: About.offsetTop + About.offsetHeight,
+      bottom: About.offsetTop + About.offsetHeight + 60,
     };
 
     newState.Skills = {
       top: Skills.offsetTop,
-      bottom: Skills.offsetTop + Skills.offsetHeight,
+      bottom: Skills.offsetTop + Skills.offsetHeight + 60,
     };
 
     newState.Project = {
@@ -54,6 +54,8 @@ function HeaderContainer() {
 
     setState(newState);
   }, [state]);
+
+  console.log(pos);
 
   return (
     <>
