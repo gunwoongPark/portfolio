@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const HeaderContainer = styled.div`
   background: white;
@@ -10,29 +11,66 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  z-index: 10;
+  z-index: 5;
 `;
 
 const Title = styled.h1`
   font-size: 24px;
-  margin-left: 50px;
+  z-index: 1;
+  margin-left: ${(props) => (props.mode === "isMobile" ? "25px" : "50px")};
 `;
 
 const LinkContainer = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0 50px 0 0;
+  ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          display: flex;
+          list-style: none;
+          margin: 0 50px 0 0;
+        `
+      : css`
+          padding-left: 0;
+          text-align: center;
+          display: block;
+          position: absolute;
+          top: ${(props) => (props.open ? "100% " : "-500%")};
+          transition: top 0.3s ease-in;
+
+          width: 100%;
+          background: white;
+
+          z-index: -1;
+        `}
+`;
+
+const HamburgerBtn = styled.button`
+  display: none;
+
+  ${(props) =>
+    props.mode === "isMobile" &&
+    css`
+      display: flex;
+      border-radius: 8px;
+      background: white;
+      margin-right: 1rem;
+      z-index: 1;
+    `}
 `;
 
 const LinkBtn = styled.li`
+  list-style: none;
   cursor: pointer;
   padding: 10px;
-  margin-left: 20px;
   font-size: 20px;
+  ${(props) =>
+    props.mode === "isPc" &&
+    css`
+      margin-left: 20px;
+      border-bottom: 3px solid ${(props) => (props.current ? "black" : "white")};
+      transition: border-bottom 0.2s ease-in;
+    `}
 
-  border-bottom: 3px solid ${(props) => (props.current ? "black" : "white")};
-
-  transition: border-bottom 0.2s ease-in;
+  ${(props) => props.mode === "isMobile" && css``}
 `;
 
 const LinkItem = styled.a`
@@ -44,22 +82,56 @@ const LinkItem = styled.a`
   }
 `;
 
-function HeaderPresenter({ Home, About, Skills, Project, pos }) {
+const Cover = styled.div`
+  ${(props) =>
+    props.mode === "isMobile" &&
+    css`
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 0;
+    `}
+`;
+
+function HeaderPresenter({
+  Home,
+  About,
+  Skills,
+  Project,
+  pos,
+  mode,
+  open,
+  toggleHamburger,
+}) {
   return (
     <>
       <HeaderContainer>
-        <Title>gunwoongPark</Title>
-        <LinkContainer>
-          <LinkBtn current={pos <= Home.bottom}>
+        <Title mode={mode}>gunwoongPark</Title>
+
+        <HamburgerBtn mode={mode} onClick={toggleHamburger}>
+          <GiHamburgerMenu />
+        </HamburgerBtn>
+
+        <Cover mode={mode} />
+
+        <LinkContainer mode={mode} open={open}>
+          <LinkBtn mode={mode} current={pos <= Home.bottom}>
             <LinkItem href="#Home">Home</LinkItem>
           </LinkBtn>
-          <LinkBtn current={pos >= About.top && pos <= About.bottom}>
+          <LinkBtn
+            mode={mode}
+            current={pos >= About.top && pos <= About.bottom}
+          >
             <LinkItem href="#About">About</LinkItem>
           </LinkBtn>
-          <LinkBtn current={pos >= Skills.top && pos <= Skills.bottom}>
+          <LinkBtn
+            mode={mode}
+            current={pos >= Skills.top && pos <= Skills.bottom}
+          >
             <LinkItem href="#Skills">Skills</LinkItem>
           </LinkBtn>
-          <LinkBtn current={pos >= Project.top}>
+          <LinkBtn mode={mode} current={pos >= Project.top}>
             <LinkItem href="#Project">Project</LinkItem>
           </LinkBtn>
         </LinkContainer>

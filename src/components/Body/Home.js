@@ -4,6 +4,7 @@ import jumbImg from "../../assets/jumbotron.jpg";
 
 const JumbotronContainer = styled.div`
   position: relative;
+  z-index: auto;
 `;
 
 const Image = styled.div`

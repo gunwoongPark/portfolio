@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import HeaderPresenter from "./HeaderPresenter";
+import { useMediaQuery } from "react-responsive";
 
 function HeaderContainer() {
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
   let [pos, setPos] = useState(-1);
   let [state, setState] = useState({
     Home: {
@@ -21,6 +29,13 @@ function HeaderContainer() {
       bottom: 0,
     },
   });
+  let [mode, setMode] = useState("");
+  let [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (isPc) setMode("isPc");
+    else if (isMobile) setMode("isMobile");
+  }, [isMobile, isPc]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => setPos(window.scrollY));
@@ -55,7 +70,9 @@ function HeaderContainer() {
     setState(newState);
   }, [state]);
 
-  console.log(pos);
+  const toggleHamburger = () => {
+    setOpen(!open);
+  };
 
   return (
     <>
@@ -65,6 +82,9 @@ function HeaderContainer() {
         Skills={state.Skills}
         Project={state.Project}
         pos={pos}
+        mode={mode}
+        open={open}
+        toggleHamburger={toggleHamburger}
       />
     </>
   );
