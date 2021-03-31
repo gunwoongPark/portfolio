@@ -46,7 +46,7 @@ function ProjectPresenter(props) {
     <>
       <hr />
 
-      <Container id="Project" style={{ marginTop: "70px", paddingTop: "50px" }}>
+      <Container id="Project" style={{ paddingTop: "120px" }}>
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>Project</h1>

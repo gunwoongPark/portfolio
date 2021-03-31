@@ -11,7 +11,13 @@ function SkillsPresenter({ skills }) {
   return (
     <>
       <hr />
-      <Container id="Skills" style={{ marginTop: "70px", paddingTop: "50px" }}>
+      <Container
+        id="Skills"
+        style={{
+          paddingTop: "120px",
+          paddingBottom: "120px",
+        }}
+      >
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>Skills</h1>
