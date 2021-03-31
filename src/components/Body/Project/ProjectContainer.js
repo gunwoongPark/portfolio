@@ -27,6 +27,7 @@ function ProjectContainer() {
       info: `셈틀꾼 회원들이 사용할 수 있는 공식 홈페이지 구현함
       프로젝트 공고, 게시, 질문 사이트 등을 구현
       관리자 페이지를 통한 인원관리 구현
+      
       Vue.js 기반, Vuetify를 사용하여 개발`,
       image: [
         semtle1,
