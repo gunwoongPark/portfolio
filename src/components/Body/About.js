@@ -38,7 +38,7 @@ function About() {
   return (
     <Container
       id="About"
-      style={{ paddingTop: "120px", paddingBottom: "120px" }}
+      style={{ paddingTop: "120px", paddingBottom: "70px" }}
     >
       <Row className="mt-5 title">
         <Col>

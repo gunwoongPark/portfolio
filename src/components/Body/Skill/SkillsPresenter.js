@@ -15,7 +15,7 @@ function SkillsPresenter({ skills }) {
         id="Skills"
         style={{
           paddingTop: "120px",
-          paddingBottom: "120px",
+          paddingBottom: "70px",
         }}
       >
         <Row className="mt-5 title">

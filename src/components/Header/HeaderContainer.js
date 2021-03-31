@@ -49,17 +49,17 @@ function HeaderContainer() {
 
     newState.Home = {
       top: Home.offsetTop,
-      bottom: Home.offsetTop + Home.offsetHeight + 60,
+      bottom: Home.offsetTop + Home.offsetHeight,
     };
 
     newState.About = {
       top: About.offsetTop,
-      bottom: About.offsetTop + About.offsetHeight + 60,
+      bottom: About.offsetTop + About.offsetHeight,
     };
 
     newState.Skills = {
       top: Skills.offsetTop,
-      bottom: Skills.offsetTop + Skills.offsetHeight + 60,
+      bottom: Skills.offsetTop + Skills.offsetHeight,
     };
 
     newState.Project = {
