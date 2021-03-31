@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import jumbImg from "../../assets/jumbotron.jpg";
 import { useMediaQuery } from "react-responsive";
 

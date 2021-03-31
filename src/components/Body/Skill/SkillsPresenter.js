@@ -7,6 +7,14 @@ const SkillContainer = styled.div`
   height: auto;
 `;
 
+const S = styled.h1`
+  color: #000080;
+  display: inline;
+  font-size: 45px;
+  text-decoration: underline;
+  text-decoration-color: #000080;
+`;
+
 function SkillsPresenter({ skills }) {
   return (
     <>
@@ -20,7 +28,9 @@ function SkillsPresenter({ skills }) {
       >
         <Row className="mt-5 title">
           <Col>
-            <h1 style={{ fontSize: "45px" }}>Skills</h1>
+            <h1 style={{ fontSize: "45px" }}>
+              <S>S</S>kills
+            </h1>
           </Col>
         </Row>
 

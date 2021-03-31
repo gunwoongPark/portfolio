@@ -40,6 +40,8 @@ function ProjectContainer() {
         semtle9,
         semtle10,
       ],
+      url: "http://sbmi.iptime.org/",
+      git: "https://github.com/gunwoongPark/semtleProject-front",
     },
 
     {
@@ -49,6 +51,8 @@ function ProjectContainer() {
       노트와 인공지능을 결합한 노트 웹앱을 구현함
       Tensorflow.js를 활용하여 
       이미지 객체 탐지를 통한 자동 태깅 기능
+      OpenWeather API를 활용하여 
+      실시간 현위치 날씨 정보
       Google Firebase를 적극 활용
 
       - Hosting을 활용한 서버 호스팅
@@ -57,6 +61,8 @@ function ProjectContainer() {
 
       Vue.js 기반 Vuetify를 사용하여 개발`,
       image: [vueticky1, vueticky2, vueticky3, vueticky4, vueticky5],
+      url: "https://vueticky-note-b08f1.web.app/",
+      git: "https://github.com/gunwoongPark/Vueticky-Note",
     },
   ];
 

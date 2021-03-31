@@ -27,6 +27,15 @@ const Title = styled.h1`
   margin-left: ${(props) => (props.mode === "isMobile" ? "25px" : "50px")};
 `;
 
+const P = styled.h1`
+  display: inline;
+  font-size: 24px;
+  z-index: 1;
+  color: #000080;
+  text-decoration: underline;
+  text-decoration-color: #000080;
+`;
+
 const LinkContainer = styled.ul`
   ${(props) =>
     props.mode === "isPc"
@@ -63,10 +72,6 @@ const HamburgerBtn = styled.button`
       z-index: 1;
       border: none;
 
-      &:hover {
-        filter: brightness(120%);
-      }
-
       &:active {
         filter: brightness(80%);
       }
@@ -82,7 +87,8 @@ const LinkBtn = styled.li`
     props.mode === "isPc" &&
     css`
       margin-left: 20px;
-      border-bottom: 3px solid ${(props) => (props.current ? "black" : "white")};
+      border-bottom: 3px solid
+        ${(props) => (props.current ? "#000080" : "white")};
       transition: border-bottom 0.2s ease-in;
     `}
 
@@ -94,10 +100,6 @@ const LinkBtn = styled.li`
 
       width: 75%;
       border-radius: 1rem;
-
-      &:hover {
-        filter: brightness(120%);
-      }
 
       &:active {
         filter: brightness(80%);
@@ -140,7 +142,9 @@ function HeaderPresenter({
   return (
     <>
       <HeaderContainer pos={pos}>
-        <Title mode={mode}>gunwoongPark</Title>
+        <Title mode={mode}>
+          gunwoong<P>P</P>ark
+        </Title>
 
         <HamburgerBtn mode={mode} onClick={toggleHamburger}>
           {!open ? <GiHamburgerMenu size="24" /> : <GrClose size="24" />}

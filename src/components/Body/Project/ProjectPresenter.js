@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import Slider from "react-slick";
-
+import { SiGithub } from "react-icons/si";
+import { VscLinkExternal } from "react-icons/vsc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -56,6 +57,32 @@ const ProjectContents = styled.pre`
         `}
 `;
 
+const P = styled.h1`
+  color: #000080;
+  display: inline;
+  font-size: 45px;
+  text-decoration: underline;
+  text-decoration-color: #000080;
+`;
+
+const LinkBtnGroup = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const LinkBtn = styled.button`
+  color: black;
+  background: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+
+  &:active {
+    filter: brightness(80%);
+  }
+`;
+
 function ProjectPresenter({ projects, mode }) {
   let settings = {
     dots: true,
@@ -72,7 +99,9 @@ function ProjectPresenter({ projects, mode }) {
       <Container id="Project" style={{ paddingTop: "120px" }}>
         <Row className="mt-5 title">
           <Col>
-            <h1 style={{ fontSize: "45px" }}>Project</h1>
+            <h1 style={{ fontSize: "45px" }}>
+              <P>P</P>roject
+            </h1>
           </Col>
         </Row>
 
@@ -93,6 +122,18 @@ function ProjectPresenter({ projects, mode }) {
                 <ProjectInfo>
                   <ProjectName mode={mode}>{project.name}</ProjectName>
                   <ProjectContents mode={mode}>{project.info}</ProjectContents>
+                  <LinkBtnGroup>
+                    <a href={project.git} target="__blank">
+                      <LinkBtn>
+                        <SiGithub size="30" />
+                      </LinkBtn>
+                    </a>
+                    <a href={project.url} target="__blank">
+                      <LinkBtn>
+                        <VscLinkExternal size="30" />
+                      </LinkBtn>
+                    </a>
+                  </LinkBtnGroup>
                 </ProjectInfo>
               </ProjectContainer>
             </Col>

@@ -34,6 +34,14 @@ const IntroduceText = styled.p`
   font-size: 20px;
 `;
 
+const A = styled.h1`
+  color: #000080;
+  display: inline;
+  font-size: 45px;
+  text-decoration: underline;
+  text-decoration-color: #000080;
+`;
+
 function About() {
   return (
     <Container
@@ -42,7 +50,9 @@ function About() {
     >
       <Row className="mt-5 title">
         <Col>
-          <h1 style={{ fontSize: "45px" }}>About</h1>
+          <h1 style={{ fontSize: "45px" }}>
+            <A>A</A>bout
+          </h1>
         </Col>
       </Row>
 
@@ -113,16 +123,14 @@ function About() {
       <Row className="mt-5 mb-5">
         <Col style={{ textAlign: "center" }}>
           <IntroduceText>
-            안녕하세요.
+            눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 프론트 엔드 개발자가
+            되기 위해 노력해왔습니다.
             <br />
-            코딩을 통해 웹을 그리는 것에 재미를 느껴 프론트엔드 개발자의 길을
-            걸었습니다.
+            빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가
+            되기 위해 노력하고 있습니다.
             <br />
-            발전하는 기술의 흐름 속에서, 그것에 적응하고 더 좋은 개발자가 되고
-            싶어 달려가고 있습니다.
-            <br />
-            자신의 일을 좋아하는 열정있는 개발자 입니다! 저에 대해 궁금하신 점이
-            있다면, 위의 주소로 연락주세요!
+            열정과 끈기가 있는 개발자입니다. 저에 대해 궁금하신 점이 있다면,
+            위의 주소로 연락해주세요!
           </IntroduceText>
         </Col>
       </Row>
