@@ -10,8 +10,8 @@ import jsIcon from "../../../assets/js.png";
 import vuetifyIcon from "../../../assets/vuetify.svg";
 import sassIcon from "../../../assets/sass.png";
 import githubIcon from "../../../assets/github.png";
-import tsIcon from "../../../assets/typescript.png";
-import reduxIcon from "../../../assets/redux.png";
+// import tsIcon from "../../../assets/typescript.png";
+// import reduxIcon from "../../../assets/redux.png";
 
 function SkillsContainer() {
   const skills = [
@@ -21,11 +21,11 @@ function SkillsContainer() {
     { name: "Vue", icon: vueIcon },
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "React", icon: reactIcon },
-    { name: "TypeScript", icon: tsIcon },
+    // { name: "TypeScript", icon: tsIcon },
     { name: "Bootstrap", icon: bootstrapIcon },
     { name: "Sass", icon: sassIcon },
     { name: "GitHub", icon: githubIcon },
-    { name: "Redux", icon: reduxIcon },
+    // { name: "Redux", icon: reduxIcon },
   ];
   return <SkillsPresenter skills={skills} />;
 }

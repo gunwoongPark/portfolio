@@ -13,9 +13,12 @@ const HeaderContainer = styled.div`
   align-items: center;
   z-index: 5;
 
-  ${(props) => props.pos && css`
-    
-  `}
+  ${(props) =>
+    props.pos &&
+    css`
+      box-shadow: 0 1px 10px 1px #444;
+      transition: box-shadow 0.3s ease-in;
+    `}
 `;
 
 const Title = styled.h1`

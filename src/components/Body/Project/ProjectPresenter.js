@@ -69,7 +69,7 @@ function ProjectPresenter(props) {
 
                 <ProjectInfo>
                   <h2>{project.name}</h2>
-                  <h5>{project.info}</h5>
+                  <pre style={{ fontSize: "24px" }}>{project.info}</pre>
                 </ProjectInfo>
               </ProjectContainer>
             </Col>
