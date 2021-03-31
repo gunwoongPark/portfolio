@@ -7,6 +7,15 @@ import Project from "./components/Body/Project/ProjectContainer";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: NanumSquare;
+  src: local('NanumSquare_acR');
+}
+
+body{
+  font-family:'NanumSquare'
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -17,7 +26,7 @@ body{
 }
 
 body::-webkit-scrollbar{
-  /* display:none; */
+  display:none;
 }
 `;
 

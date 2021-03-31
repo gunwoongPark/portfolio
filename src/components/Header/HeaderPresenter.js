@@ -12,6 +12,10 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 5;
+
+  ${(props) => props.pos && css`
+    
+  `}
 `;
 
 const Title = styled.h1`
@@ -33,7 +37,7 @@ const LinkContainer = styled.ul`
           text-align: center;
           display: block;
           position: absolute;
-          top: ${(props) => (props.open ? "100% " : "-500%")};
+          top: ${(props) => (props.open ? "100% " : "-700%")};
           transition: top 0.3s ease-in;
 
           width: 100%;
@@ -83,6 +87,7 @@ const LinkBtn = styled.li`
     props.mode === "isMobile" &&
     css`
       background: white;
+      margin: 1rem 0 1rem 0;
 
       width: 75%;
       border-radius: 1rem;
@@ -131,7 +136,7 @@ function HeaderPresenter({
 }) {
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer pos={pos}>
         <Title mode={mode}>gunwoongPark</Title>
 
         <HamburgerBtn mode={mode} onClick={toggleHamburger}>
