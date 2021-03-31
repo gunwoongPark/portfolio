@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectPresenter from "./ProjectPresenter";
+import { useMediaQuery } from "react-responsive";
 
 import semtle1 from "../../../assets/semtle/semtle1.PNG";
 import semtle2 from "../../../assets/semtle/semtle2.PNG";
@@ -24,7 +25,8 @@ function ProjectContainer() {
       id: 1,
       name: "셈틀꾼 공식 홈페이지 구현",
       info: `셈틀꾼 회원들이 사용할 수 있는 공식 홈페이지 구현함
-      프로젝트 공고, 게시, 질문 사이트 등을 구현하고 관리자 페이지를 통한 인원관리 구현
+      프로젝트 공고, 게시, 질문 사이트 등을 구현
+      관리자 페이지를 통한 인원관리 구현
       Vue.js 기반, Vuetify를 사용하여 개발`,
       image: [
         semtle1,
@@ -45,7 +47,8 @@ function ProjectContainer() {
       name: "Vueticky Note",
       info: `노트 웹앱 구현 프로젝트
       노트와 인공지능을 결합한 노트 웹앱을 구현함
-      Tensorflow.js의 이미지 객체 탐지를 활용한 자동 태깅 기능
+      Tensorflow.js를 활용하여 
+      이미지 객체 탐지를 통한 자동 태깅 기능
       Google Firebase를 적극 활용
 
       - Hosting을 활용한 서버 호스팅
@@ -57,9 +60,23 @@ function ProjectContainer() {
     },
   ];
 
+  let [mode, setMode] = useState("");
+
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
+  useEffect(() => {
+    if (isPc) setMode("isPc");
+    else if (isMobile) setMode("isMobile");
+  }, [isMobile, isPc]);
+
   return (
     <>
-      <ProjectPresenter projects={projects} />;
+      <ProjectPresenter projects={projects} mode={mode} />;
     </>
   );
 }

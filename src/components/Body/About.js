@@ -62,7 +62,7 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>Birthday :</h5>
-                <p style={{ margin: "0" }}>1997.08.07</p>
+                <p style={{ margin: "0", fontSize: "17px" }}>1997.08.07</p>
               </div>
             </li>
           </ContentContainer>
@@ -74,7 +74,9 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>Phone :</h5>
-                <p style={{ margin: "0" }}>+82 10-5217-5646</p>
+                <p style={{ margin: "0", fontSize: "17px" }}>
+                  +82 10-5217-5646
+                </p>
               </div>
             </li>
           </ContentContainer>
@@ -86,7 +88,9 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>EMail :</h5>
-                <p style={{ margin: "0" }}>bung1438@gmail.com</p>
+                <p style={{ margin: "0", fontSize: "17px" }}>
+                  bung1438@gmail.com
+                </p>
               </div>
             </li>
           </ContentContainer>
@@ -98,7 +102,9 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>GitHub :</h5>
-                <p style={{ margin: "0" }}>https://github.com/gunwoongPark</p>
+                <p style={{ margin: "0", fontSize: "17px" }}>
+                  https://github.com/gunwoongPark
+                </p>
               </div>
             </li>
           </ContentContainer>

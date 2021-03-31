@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -33,7 +33,30 @@ const ProjectInfo = styled.div`
   padding: 12px;
 `;
 
-function ProjectPresenter(props) {
+const ProjectName = styled.h1`
+  ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          font-size: 26px;
+          font-weight: bold;
+        `
+      : css`
+          font-size: 20px;
+        `}
+`;
+
+const ProjectContents = styled.pre`
+  ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          font-size: 20px;
+        `
+      : css`
+          font-size: 15px;
+        `}
+`;
+
+function ProjectPresenter({ projects, mode }) {
   let settings = {
     dots: true,
     slidesToShow: 1,
@@ -53,7 +76,7 @@ function ProjectPresenter(props) {
           </Col>
         </Row>
 
-        {props.projects.map((project, index) => (
+        {projects.map((project, index) => (
           <Row className="mt-5 mb-5" key={index}>
             <Col>
               <ProjectContainer>
@@ -68,8 +91,8 @@ function ProjectPresenter(props) {
                 </CarouselContainer>
 
                 <ProjectInfo>
-                  <h2>{project.name}</h2>
-                  <pre style={{ fontSize: "24px" }}>{project.info}</pre>
+                  <ProjectName mode={mode}>{project.name}</ProjectName>
+                  <ProjectContents mode={mode}>{project.info}</ProjectContents>
                 </ProjectInfo>
               </ProjectContainer>
             </Col>
