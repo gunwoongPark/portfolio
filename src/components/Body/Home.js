@@ -1,6 +1,7 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes, css } from "styled-components";
 import jumbImg from "../../assets/jumbotron.jpg";
+import { useMediaQuery } from "react-responsive";
 
 const JumbotronContainer = styled.div`
   position: relative;
@@ -20,6 +21,13 @@ const Image = styled.div`
   background-size: cover;
 `;
 
+const HelloWorld = styled.h1`
+  font-size: ${(props) => (props.mode === "isPc" ? "72px" : "48px")};
+`;
+const Contents = styled.h2`
+  font-size: ${(props) => (props.mode === "isPc" ? "56px" : "28px")};
+`;
+
 const sparkle = keyframes`
     0% {opacity:1;}
     50%{opacity:0;}
@@ -28,7 +36,7 @@ const sparkle = keyframes`
 
 const UnderBar = styled.h2`
   display: inline;
-  font-size: 48px;
+  font-size: ${(props) => (props.mode === "isPc" ? "48px" : "24px")};
 
   animation-duration: 0.75s;
   animation-name: ${sparkle};
@@ -36,16 +44,30 @@ const UnderBar = styled.h2`
 `;
 
 function Home() {
+  let [mode, setMode] = useState("");
+
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
+  useEffect(() => {
+    if (isPc) setMode("isPc");
+    else if (isMobile) setMode("isMobile");
+  }, [isMobile, isPc]);
+
   return (
     <>
       <JumbotronContainer id="Home">
         <Image>
           <div style={{ color: "white" }}>
-            <h1 style={{ fontSize: "72px" }}>Hello World!</h1>
-            <h2 style={{ fontSize: "56px" }}>제 이름은 박건웅 입니다.</h2>
-            <h2 style={{ fontSize: "56px" }}>
-              저는 프론트엔드 개발자입니다<UnderBar>_</UnderBar>
-            </h2>
+            <HelloWorld mode={mode}>Hello World!</HelloWorld>
+            <Contents mode={mode}>제 이름은 박건웅 입니다.</Contents>
+            <Contents mode={mode}>
+              저는 프론트 엔드 개발자입니다<UnderBar mode={mode}>_</UnderBar>
+            </Contents>
           </div>
         </Image>
       </JumbotronContainer>
