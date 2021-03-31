@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { GrClose } from "react-icons/gr";
 
 const HeaderContainer = styled.div`
   background: white;
@@ -10,7 +11,6 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   z-index: 5;
 `;
 
@@ -38,9 +38,9 @@ const LinkContainer = styled.ul`
 
           width: 100%;
           background: white;
-
+          text-align: -webkit-center;
           z-index: -1;
-        `}
+        `};
 `;
 
 const HamburgerBtn = styled.button`
@@ -54,6 +54,15 @@ const HamburgerBtn = styled.button`
       background: white;
       margin-right: 1rem;
       z-index: 1;
+      border: none;
+
+      &:hover {
+        filter: brightness(120%);
+      }
+
+      &:active {
+        filter: brightness(80%);
+      }
     `}
 `;
 
@@ -70,11 +79,27 @@ const LinkBtn = styled.li`
       transition: border-bottom 0.2s ease-in;
     `}
 
-  ${(props) => props.mode === "isMobile" && css``}
+  ${(props) =>
+    props.mode === "isMobile" &&
+    css`
+      background: white;
+
+      width: 75%;
+      border-radius: 1rem;
+
+      &:hover {
+        filter: brightness(120%);
+      }
+
+      &:active {
+        filter: brightness(80%);
+      }
+    `}
 `;
 
 const LinkItem = styled.a`
   color: black;
+  display: block;
 
   &:hover {
     color: black;
@@ -110,7 +135,7 @@ function HeaderPresenter({
         <Title mode={mode}>gunwoongPark</Title>
 
         <HamburgerBtn mode={mode} onClick={toggleHamburger}>
-          <GiHamburgerMenu />
+          {!open ? <GiHamburgerMenu size="24" /> : <GrClose size="24" />}
         </HamburgerBtn>
 
         <Cover mode={mode} />
