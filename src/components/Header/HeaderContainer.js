@@ -39,7 +39,10 @@ function HeaderContainer() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => setPos(window.scrollY));
+  }, []);
 
+  useEffect(() => {
+    console.log("call!");
     const Home = document.querySelector("#Home");
     const About = document.querySelector("#About");
     const Skills = document.querySelector("#Skills");
