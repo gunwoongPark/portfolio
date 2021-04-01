@@ -11,15 +11,6 @@ const ProjectContainer = styled.div`
   text-align: center;
   background: white;
   border-radius: 1rem;
-
-  ${(props) =>
-    props.mode === "isPc" &&
-    css`
-      &:hover {
-        box-shadow: 10px 10px 10px gray;
-        transition-duration: 0.4s;
-      }
-    `}
 `;
 
 const CarouselContainer = styled.div`
