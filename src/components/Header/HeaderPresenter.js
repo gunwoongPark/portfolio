@@ -40,6 +40,7 @@ const P = styled.h1`
   color: #000080;
   text-decoration: underline;
   text-decoration-color: #000080;
+  font-weight: bold;
 `;
 
 const LinkContainer = styled.ul`

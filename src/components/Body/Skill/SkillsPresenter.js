@@ -13,6 +13,7 @@ const S = styled.h1`
   font-size: 45px;
   text-decoration: underline;
   text-decoration-color: #000080;
+  font-weight: bold;
 `;
 
 function SkillsPresenter({ skills }) {

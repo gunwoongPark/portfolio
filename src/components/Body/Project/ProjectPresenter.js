@@ -11,6 +11,8 @@ const ProjectContainer = styled.div`
   text-align: center;
   background: white;
   border-radius: 1rem;
+
+  border: 1px solid #ced4da;
 `;
 
 const CarouselContainer = styled.div`
@@ -26,6 +28,7 @@ const ProjectImage = styled.img`
 const ProjectInfo = styled.div`
   text-align: center;
   margin: 0 auto;
+  margin-top: 2rem;
   padding: 12px;
 `;
 
@@ -53,6 +56,7 @@ const ProjectContents = styled.pre`
 `;
 
 const P = styled.h1`
+  font-weight: bold;
   color: #000080;
   display: inline;
   font-size: 45px;

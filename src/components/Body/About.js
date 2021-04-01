@@ -35,6 +35,7 @@ const IntroduceText = styled.p`
 `;
 
 const A = styled.h1`
+  font-weight: bold;
   color: #000080;
   display: inline;
   font-size: 45px;
