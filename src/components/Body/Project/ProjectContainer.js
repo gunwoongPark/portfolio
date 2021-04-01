@@ -83,7 +83,7 @@ function ProjectContainer() {
 
   return (
     <>
-      <ProjectPresenter projects={projects} mode={mode} />;
+      <ProjectPresenter projects={projects} mode={mode} />
     </>
   );
 }
