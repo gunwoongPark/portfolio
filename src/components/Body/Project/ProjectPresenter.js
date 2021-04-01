@@ -12,10 +12,14 @@ const ProjectContainer = styled.div`
   background: white;
   border-radius: 1rem;
 
-  &:hover {
-    box-shadow: 10px 10px 10px gray;
-    transition-duration: 0.4s;
-  }
+  ${(props) =>
+    props.mode === "isPc" &&
+    css`
+      &:hover {
+        box-shadow: 10px 10px 10px gray;
+        transition-duration: 0.4s;
+      }
+    `}
 `;
 
 const CarouselContainer = styled.div`
@@ -108,7 +112,7 @@ function ProjectPresenter({ projects, mode }) {
         {projects.map((project, index) => (
           <Row className="mt-5 mb-5" key={index}>
             <Col>
-              <ProjectContainer>
+              <ProjectContainer mode={mode}>
                 <CarouselContainer className="mb-3 ">
                   <Slider {...settings}>
                     {project.image.map((img, index) => (

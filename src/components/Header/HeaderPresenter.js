@@ -14,9 +14,15 @@ const HeaderContainer = styled.div`
   z-index: 5;
 
   ${(props) =>
+    props.mode === "isMobile" &&
+    css`
+      padding: 10px 0 10px 0;
+    `}
+
+  ${(props) =>
     props.pos &&
     css`
-      box-shadow: 0 1px 10px 1px #444;
+      box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.3);
       transition: box-shadow 0.3s ease-in;
     `}
 `;
@@ -49,7 +55,7 @@ const LinkContainer = styled.ul`
           text-align: center;
           display: block;
           position: absolute;
-          top: ${(props) => (props.open ? "100% " : "-700%")};
+          top: ${(props) => (props.open ? "100% " : "-820%")};
           transition: top 0.3s ease-in;
 
           width: 100%;
@@ -81,7 +87,8 @@ const HamburgerBtn = styled.button`
 const LinkBtn = styled.li`
   list-style: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 1rem;
+
   font-size: 20px;
   ${(props) =>
     props.mode === "isPc" &&
@@ -141,7 +148,7 @@ function HeaderPresenter({
 }) {
   return (
     <>
-      <HeaderContainer pos={pos}>
+      <HeaderContainer pos={pos} mode={mode}>
         <Title mode={mode}>
           gunwoong<P>P</P>ark
         </Title>
