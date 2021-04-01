@@ -43,6 +43,16 @@ const A = styled.h1`
   text-decoration-color: #000080;
 `;
 
+const Anchor = styled.a`
+  margin: 0;
+  font-size: 17px;
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+`;
+
 function About() {
   return (
     <Container
@@ -99,9 +109,12 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>EMail :</h5>
-                <p style={{ margin: "0", fontSize: "17px" }}>
+                <Anchor
+                  href="mailto:bung1438@gmail.com"
+                  style={{ margin: "0", fontSize: "17px" }}
+                >
                   bung1438@gmail.com
-                </p>
+                </Anchor>
               </div>
             </li>
           </ContentContainer>
@@ -113,9 +126,13 @@ function About() {
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>GitHub :</h5>
-                <p style={{ margin: "0", fontSize: "17px" }}>
+                <Anchor
+                  style={{ margin: "0", fontSize: "17px" }}
+                  href="https://github.com/gunwoongPark"
+                  target="__blank"
+                >
                   https://github.com/gunwoongPark
-                </p>
+                </Anchor>
               </div>
             </li>
           </ContentContainer>
