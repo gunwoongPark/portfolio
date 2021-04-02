@@ -9,7 +9,8 @@ const FooterContainer = styled.div`
   color: white;
   display: flex;
   justify-content: center;
-  padding: 25px;
+  padding: 24px;
+  font-size: 17px;
 `;
 
 function Footer() {
