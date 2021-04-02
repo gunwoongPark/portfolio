@@ -42,7 +42,6 @@ function HeaderContainer() {
   }, []);
 
   useEffect(() => {
-    console.log("call!");
     const Home = document.querySelector("#Home");
     const About = document.querySelector("#About");
     const Skills = document.querySelector("#Skills");
@@ -56,17 +55,17 @@ function HeaderContainer() {
     };
 
     newState.About = {
-      top: About.offsetTop,
+      top: About.offsetTop - 56,
       bottom: About.offsetTop + About.offsetHeight,
     };
 
     newState.Skills = {
-      top: Skills.offsetTop,
+      top: Skills.offsetTop - 56,
       bottom: Skills.offsetTop + Skills.offsetHeight,
     };
 
     newState.Project = {
-      top: Project.offsetTop,
+      top: Project.offsetTop - 56,
       bottom: Project.offsetTop + Project.offsetHeight,
     };
 

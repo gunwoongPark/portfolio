@@ -57,7 +57,7 @@ function About() {
   return (
     <Container
       id="About"
-      style={{ paddingTop: "120px", paddingBottom: "70px" }}
+      style={{ paddingTop: "90px", marginTop: "30px", paddingBottom: "70px" }}
     >
       <Row className="mt-5 title">
         <Col>
@@ -142,7 +142,7 @@ function About() {
         <Col style={{ textAlign: "center" }}>
           <IntroduceText>
             눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 프론트 엔드 개발자가
-            되기 위해 노력해오는 대학생입니다.
+            되기 위해 노력하는 대학생입니다.
             <br />
             빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가
             되기 위해 노력하고 있습니다.

@@ -94,8 +94,7 @@ function ProjectPresenter({ projects, mode }) {
   return (
     <>
       <hr />
-
-      <Container id="Project" style={{ paddingTop: "120px" }}>
+      <Container id="Project" style={{ paddingTop: "90px", marginTop: "30px" }}>
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>

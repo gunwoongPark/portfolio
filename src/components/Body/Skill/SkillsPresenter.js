@@ -23,7 +23,8 @@ function SkillsPresenter({ skills }) {
       <Container
         id="Skills"
         style={{
-          paddingTop: "120px",
+          paddingTop: "90px",
+          marginTop: "30px",
           paddingBottom: "70px",
         }}
       >
