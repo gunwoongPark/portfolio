@@ -4,12 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaBirthdayCake } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { MdMail, MdCall } from "react-icons/md";
-import image from "../../assets/userImg.png";
+import image from "../../assets/myphoto.jpg";
 
 const Portrait = styled.img`
   object-fit: cover;
   border-radius: 50%;
-  width: 200px;
+  width: 300px;
 `;
 
 const ContentContainer = styled.ul`
