@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaBirthdayCake } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { MdMail, MdCall } from "react-icons/md";
+import { FaUniversity } from "react-icons/fa";
 import image from "../../assets/myphoto.jpg";
 
 const Portrait = styled.img`
@@ -15,7 +16,7 @@ const Portrait = styled.img`
 const ContentContainer = styled.ul`
   list-style: none;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 20px;
 `;
 
 const IconContainer = styled.span`
@@ -103,6 +104,24 @@ function About() {
           </ContentContainer>
 
           <ContentContainer>
+            <li className="University" style={{ display: "flex" }}>
+              <IconContainer>
+                <FaUniversity size="30" />
+              </IconContainer>
+              <div style={{ marginLeft: "24px" }}>
+                <h5 style={{ margin: "0" }}>University :</h5>
+                <Anchor
+                  style={{ margin: "0", fontSize: "17px" }}
+                  href="https://www.kumoh.ac.kr/ko/index.do"
+                  target="__blank"
+                >
+                  금오공과대학교
+                </Anchor>
+              </div>
+            </li>
+          </ContentContainer>
+
+          <ContentContainer>
             <li className="EMail" style={{ display: "flex" }}>
               <IconContainer>
                 <MdMail size="30" />
@@ -110,10 +129,10 @@ function About() {
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>EMail :</h5>
                 <Anchor
-                  href="mailto:bung1438@gmail.com"
+                  href="mailto:olympiodoros@naver.com"
                   style={{ margin: "0", fontSize: "17px" }}
                 >
-                  bung1438@gmail.com
+                  olympiodoros@naver.com
                 </Anchor>
               </div>
             </li>
