@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.48277816.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.48277816.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.26fa19c8.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.26fa19c8.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.11ee6744.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.11ee6744.js.map",
     "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
@@ -21,6 +21,7 @@
     "static/media/myphoto.17af38e1.jpg": "/portfolio/static/media/myphoto.17af38e1.jpg",
     "static/media/python.d8b377f0.png": "/portfolio/static/media/python.d8b377f0.png",
     "static/media/react.b37f0a4b.png": "/portfolio/static/media/react.b37f0a4b.png",
+    "static/media/redux.7fec6369.png": "/portfolio/static/media/redux.7fec6369.png",
     "static/media/sass.d854f0ed.png": "/portfolio/static/media/sass.d854f0ed.png",
     "static/media/semtle1.cf05bdca.PNG": "/portfolio/static/media/semtle1.cf05bdca.PNG",
     "static/media/semtle10.b1ed7a74.PNG": "/portfolio/static/media/semtle10.b1ed7a74.PNG",
@@ -46,6 +47,6 @@
     "static/css/2.ba69f5a0.chunk.css",
     "static/js/2.45839e0e.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.48277816.chunk.js"
+    "static/js/main.26fa19c8.chunk.js"
   ]
 }
