@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.26fa19c8.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.26fa19c8.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.9daa41c3.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.9daa41c3.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.11ee6744.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.11ee6744.js.map",
     "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
@@ -34,6 +34,7 @@
     "static/media/semtle8.733ce852.PNG": "/portfolio/static/media/semtle8.733ce852.PNG",
     "static/media/semtle9.d920bc19.PNG": "/portfolio/static/media/semtle9.d920bc19.PNG",
     "static/media/slick-theme.css": "/portfolio/static/media/slick.c94f7671.ttf",
+    "static/media/styled-components.76b9df72.png": "/portfolio/static/media/styled-components.76b9df72.png",
     "static/media/vue.c5e19801.png": "/portfolio/static/media/vue.c5e19801.png",
     "static/media/vueticky1.9cc1e16a.png": "/portfolio/static/media/vueticky1.9cc1e16a.png",
     "static/media/vueticky2.710b8ea8.png": "/portfolio/static/media/vueticky2.710b8ea8.png",
@@ -47,6 +48,6 @@
     "static/css/2.ba69f5a0.chunk.css",
     "static/js/2.45839e0e.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.26fa19c8.chunk.js"
+    "static/js/main.9daa41c3.chunk.js"
   ]
 }
