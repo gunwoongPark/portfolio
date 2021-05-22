@@ -16,6 +16,11 @@ const S = styled.h1`
   font-weight: bold;
 `;
 
+const NameContainer = styled.div`
+display:flex;
+justify-content:center;
+`
+
 function SkillsPresenter({ skills }) {
   return (
     <>
@@ -45,9 +50,11 @@ function SkillsPresenter({ skills }) {
                   alt={skills[index].name}
                   width="100%"
                 ></img>
-                <h5 className="mt-2" style={{ textAlign: "center" }}>
-                  {skills[index].name}
-                </h5>
+                <NameContainer>
+                  <h5 className="mt-2" style={{ textAlign: "center" }}>
+                    {skills[index].name}
+                  </h5>
+                </NameContainer>
               </SkillContainer>
             </Col>
           ))}

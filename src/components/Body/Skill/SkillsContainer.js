@@ -12,7 +12,7 @@ import sassIcon from "../../../assets/sass.png";
 import githubIcon from "../../../assets/github.png";
 import reduxIcon from "../../../assets/redux.png";
 import pyIcon from "../../../assets/python.png";
-import styledCompIcon from "../../../assets/styled_components.png"
+import styledCompIcon from "../../../assets/styled-components.png"
 
 function SkillsContainer() {
   const skills = [
