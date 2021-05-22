@@ -109,13 +109,21 @@ function About() {
                 <FaUniversity size="30" />
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
-                <h5 style={{ margin: "0" }}>University :</h5>
+                <h5 style={{ margin: "0" }}>University / Department :</h5>
                 <Anchor
                   style={{ margin: "0", fontSize: "17px" }}
                   href="https://www.kumoh.ac.kr/ko/index.do"
                   target="__blank"
                 >
                   금오공과대학교
+                </Anchor>
+                <p style={{ display: 'inline', fontSize: '17px' }}> / </p>
+                <Anchor
+                  style={{ margin: "0", fontSize: "17px" }}
+                  href="https://ce.kumoh.ac.kr/ce/index.do"
+                  target="__blank"
+                >
+                  컴퓨터공학과
                 </Anchor>
               </div>
             </li>
