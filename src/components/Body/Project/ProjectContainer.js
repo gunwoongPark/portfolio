@@ -65,6 +65,16 @@ function ProjectContainer() {
       url: "https://vueticky-note-b08f1.web.app/",
       git: "https://github.com/gunwoongPark/Vueticky-Note",
     },
+
+    {
+      id: 3,
+      name: "YouCanDoEat",
+      info: `외국인 대상 식품 식자재 정보 제공 웹앱
+      blabla`,
+      image: [],
+      url: "https://watsin-3b4e3.web.app/",
+      git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
+    },
   ];
 
   let [mode, setMode] = useState("");
