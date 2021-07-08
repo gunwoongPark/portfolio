@@ -19,6 +19,13 @@ import vueticky3 from "../../../assets/vueticky/vueticky3.png";
 import vueticky4 from "../../../assets/vueticky/vueticky4.png";
 import vueticky5 from "../../../assets/vueticky/vueticky5.png";
 
+import ycde1 from "../../../assets/youcandoeat/main.jpg";
+import ycde2 from "../../../assets/youcandoeat/sidebar.jpg";
+import ycde3 from "../../../assets/youcandoeat/select.jpg";
+import ycde4 from "../../../assets/youcandoeat/cropping.jpg";
+import ycde5 from "../../../assets/youcandoeat/result.jpg";
+import ycde6 from "../../../assets/youcandoeat/community.jpg";
+
 function ProjectContainer() {
   const projects = [
     {
@@ -43,6 +50,7 @@ function ProjectContainer() {
       ],
       url: "http://sbmi.iptime.org/",
       git: "https://github.com/gunwoongPark/semtleProject-front",
+      mode: "web",
     },
 
     {
@@ -64,16 +72,25 @@ function ProjectContainer() {
       image: [vueticky1, vueticky2, vueticky3, vueticky4, vueticky5],
       url: "https://vueticky-note-b08f1.web.app/",
       git: "https://github.com/gunwoongPark/Vueticky-Note",
+      mode: "web",
     },
 
     {
       id: 3,
       name: "YouCanDoEat",
-      info: `외국인 대상 식품 식자재 정보 제공 웹앱
-      blabla`,
-      image: [],
+      info: `외국인을 대상으로한 음식 식자재 정보 제공 웹앱 구현
+
+      Firebase Authentication을 통한 로그인 기능 제공 
+      로그인시 알레르기를 유발하는 대표적인 21가지 식자재를 기준으로 본인이 기피하는 식자재 선택해둘 수 있음
+      메뉴판을 촬영하여 사용자가 알고싶은 메뉴를 직접 Cropping
+      추출한 메뉴를 Kakao OCR을 통해 문자 식별
+      식별된 메뉴정보를 서버로 전송하여 해당 음식의 이름과 식자재 정보를 Papago API를 통해 번역
+      사용자가 미리 먹지못하는(알레르기, 종교적 이유) 식자재를 선택해뒀을 경우 식자재 정보에서 경고표시
+      그 외에 사용자가 필요한 정보를 의사소통을 통해 얻기 위해 간단한 커뮤니티 구현`,
+      image: [ycde1, ycde2, ycde3, ycde4, ycde5, ycde6],
       url: "https://watsin-3b4e3.web.app/",
       git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
+      mode: "app",
     },
   ];
 

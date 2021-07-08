@@ -22,7 +22,14 @@ const CarouselContainer = styled.div`
 const CarouselItem = styled.div``;
 
 const ProjectImage = styled.img`
-  width: 100%;
+  ${(props) =>
+    props.mode === "app"
+      ? css`
+          height: 500px;
+        `
+      : css`
+          width: 100%;
+        `}
 `;
 
 const ProjectInfo = styled.div`
@@ -111,7 +118,7 @@ function ProjectPresenter({ projects, mode }) {
                   <Slider {...settings}>
                     {project.image.map((img, index) => (
                       <CarouselItem className="mt-3" key={index}>
-                        <ProjectImage src={img} />
+                        <ProjectImage src={img} mode={project.mode} />
                       </CarouselItem>
                     ))}
                   </Slider>
