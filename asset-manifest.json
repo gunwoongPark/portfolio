@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.58d00ec9.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.58d00ec9.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.a5d9c2a3.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.a5d9c2a3.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.11ee6744.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.11ee6744.js.map",
     "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
@@ -15,14 +15,19 @@
     "static/css/main.d4a226dc.chunk.css.map": "/portfolio/static/css/main.d4a226dc.chunk.css.map",
     "static/js/2.45839e0e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.45839e0e.chunk.js.LICENSE.txt",
     "static/media/App.css": "/portfolio/static/media/NanumSquare_acR.4e7e79f4.ttf",
+    "static/media/community.37eab74b.jpg": "/portfolio/static/media/community.37eab74b.jpg",
+    "static/media/cropping.6aa3f997.jpg": "/portfolio/static/media/cropping.6aa3f997.jpg",
     "static/media/css.8bffe648.png": "/portfolio/static/media/css.8bffe648.png",
     "static/media/html.7b050054.png": "/portfolio/static/media/html.7b050054.png",
     "static/media/jumbotron.b2f3b330.jpg": "/portfolio/static/media/jumbotron.b2f3b330.jpg",
+    "static/media/main.839f8a3e.jpg": "/portfolio/static/media/main.839f8a3e.jpg",
     "static/media/myphoto.17af38e1.jpg": "/portfolio/static/media/myphoto.17af38e1.jpg",
     "static/media/python.d8b377f0.png": "/portfolio/static/media/python.d8b377f0.png",
     "static/media/react.b37f0a4b.png": "/portfolio/static/media/react.b37f0a4b.png",
     "static/media/redux.7fec6369.png": "/portfolio/static/media/redux.7fec6369.png",
+    "static/media/result.576d31cf.jpg": "/portfolio/static/media/result.576d31cf.jpg",
     "static/media/sass.d854f0ed.png": "/portfolio/static/media/sass.d854f0ed.png",
+    "static/media/select.3f130ada.jpg": "/portfolio/static/media/select.3f130ada.jpg",
     "static/media/semtle1.cf05bdca.PNG": "/portfolio/static/media/semtle1.cf05bdca.PNG",
     "static/media/semtle10.b1ed7a74.PNG": "/portfolio/static/media/semtle10.b1ed7a74.PNG",
     "static/media/semtle2.424ed65f.PNG": "/portfolio/static/media/semtle2.424ed65f.PNG",
@@ -33,8 +38,8 @@
     "static/media/semtle7.726dda52.PNG": "/portfolio/static/media/semtle7.726dda52.PNG",
     "static/media/semtle8.733ce852.PNG": "/portfolio/static/media/semtle8.733ce852.PNG",
     "static/media/semtle9.d920bc19.PNG": "/portfolio/static/media/semtle9.d920bc19.PNG",
+    "static/media/sidebar.5f2d75bd.jpg": "/portfolio/static/media/sidebar.5f2d75bd.jpg",
     "static/media/slick-theme.css": "/portfolio/static/media/slick.c94f7671.ttf",
-    "static/media/styled-components.76b9df72.png": "/portfolio/static/media/styled-components.76b9df72.png",
     "static/media/vue.c5e19801.png": "/portfolio/static/media/vue.c5e19801.png",
     "static/media/vueticky1.9cc1e16a.png": "/portfolio/static/media/vueticky1.9cc1e16a.png",
     "static/media/vueticky2.710b8ea8.png": "/portfolio/static/media/vueticky2.710b8ea8.png",
@@ -48,6 +53,6 @@
     "static/css/2.ba69f5a0.chunk.css",
     "static/js/2.45839e0e.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.58d00ec9.chunk.js"
+    "static/js/main.a5d9c2a3.chunk.js"
   ]
 }
