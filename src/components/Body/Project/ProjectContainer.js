@@ -80,6 +80,7 @@ function ProjectContainer() {
       name: "YouCanDoEat",
       info: `외국인을 대상으로한 음식 식자재 정보 제공 웹앱 구현
 
+      Firebase Hosting을 통한 프론트 서버 호스팅
       Firebase Authentication을 통한 로그인 기능 제공 
       로그인시 알레르기를 유발하는 대표적인 21가지 식자재를 기준으로 본인이 기피하는 식자재 선택해둘 수 있음
       메뉴판을 촬영하여 사용자가 알고 싶은 메뉴를 직접 Cropping
@@ -90,7 +91,9 @@ function ProjectContainer() {
       
       ReactJS, Redux.js, Firebase, PWA
       Django, SQLite
-      Kakao Vision API, Naver Papago API`,
+      Kakao Vision API, Naver Papago API
+      
+      (백 엔드 동작 X)`,
       image: [ycde1, ycde2, ycde3, ycde4, ycde5, ycde6],
       url: "https://watsin-3b4e3.web.app/",
       git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
