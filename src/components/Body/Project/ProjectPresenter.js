@@ -60,6 +60,7 @@ const ProjectContents = styled.pre`
       : css`
           font-size: 15px;
         `}
+  white-space: pre-wrap;
 `;
 
 const P = styled.h1`

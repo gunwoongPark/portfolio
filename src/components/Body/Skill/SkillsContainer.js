@@ -12,7 +12,6 @@ import sassIcon from "../../../assets/sass.png";
 import githubIcon from "../../../assets/github.png";
 import reduxIcon from "../../../assets/redux.png";
 import pyIcon from "../../../assets/python.png";
-import styledCompIcon from "../../../assets/styled-components.png"
 
 function SkillsContainer() {
   const skills = [
@@ -23,7 +22,6 @@ function SkillsContainer() {
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "React", icon: reactIcon },
     { name: "Redux", icon: reduxIcon },
-    { name: "Styled components", icon: styledCompIcon },
     { name: "Bootstrap", icon: bootstrapIcon },
     { name: "Sass", icon: sassIcon },
     { name: "GitHub", icon: githubIcon },
