@@ -92,7 +92,7 @@ function ProjectContainer() {
       그 외에 사용자가 필요한 정보를 의사소통을 통해 얻기 위해 간단한 커뮤니티 구현
       
       ReactJS, Redux.js, Firebase, PWA
-      Django, SQLite
+      Django, SQLite, Web Crawling
       Kakao Vision API, Naver Papago API
       
       (백 엔드 동작 X)`,
