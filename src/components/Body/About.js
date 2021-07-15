@@ -137,10 +137,10 @@ function About() {
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>EMail :</h5>
                 <Anchor
-                  href="mailto:olympiodoros@naver.com"
+                  href="mailto:bung1438@gmail.com"
                   style={{ margin: "0", fontSize: "17px" }}
                 >
-                  olympiodoros@naver.com
+                  bung1438@gmail.com
                 </Anchor>
               </div>
             </li>

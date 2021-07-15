@@ -36,7 +36,9 @@ function ProjectContainer() {
       관리자 페이지를 통한 인원관리 구현
       
       Vue.js, Vuex, Vuetify.js
-      ExpressJS, MongoDB`,
+      ExpressJS, MongoDB
+      
+      (유지 보수 중...)`,
       image: [
         semtle1,
         semtle2,
