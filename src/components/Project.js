@@ -63,7 +63,7 @@ const ProjectContents = styled.pre`
   white-space: pre-wrap;
 `;
 
-const ProjectTag = styled.pre`
+const ProjectTag = styled.p`
   ${(props) =>
     props.mode === "isPc"
       ? css`
@@ -72,7 +72,17 @@ const ProjectTag = styled.pre`
       : css`
           font-size: 15px;
         `}
-  white-space: pre-wrap;
+  background:#e9ecef;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  white-space: nowrap;
+  display: inline-block;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  font-weight: bold;
 `;
 
 const P = styled.h1`
@@ -140,11 +150,13 @@ function ProjectPresenter({ projects, mode }) {
                 <ProjectInfo>
                   <ProjectName mode={mode}>{project.name}</ProjectName>
                   <ProjectContents mode={mode}>{project.info}</ProjectContents>
+
                   {project.tag.map((tag, index) => (
                     <ProjectTag key={index} mode={mode}>
                       {tag}
                     </ProjectTag>
                   ))}
+
                   <LinkBtnGroup>
                     <a href={project.git} target="__blank">
                       <LinkBtn>
