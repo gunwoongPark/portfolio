@@ -29,13 +29,29 @@ const CloseBtn = styled.button`
   }
 `;
 
+const DarkBackground = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+
+  z-index: ${(props) => (props.sidebar ? "9" : "-1")};
+  opacity: ${(props) => (props.sidebar ? "1" : "0")};
+  transition: opacity 0.25s ease-out;
+`;
+
 function Timeline({ sidebar, setSidebar }) {
   return (
-    <Container sidebar={sidebar}>
-      <CloseBtn onClick={() => setSidebar(false)}>
-        <GrClose size="30" />
-      </CloseBtn>
-    </Container>
+    <>
+      <DarkBackground sidebar={sidebar} />
+      <Container sidebar={sidebar}>
+        <CloseBtn onClick={() => setSidebar(false)}>
+          <GrClose size="30" />
+        </CloseBtn>
+      </Container>
+    </>
   );
 }
 
