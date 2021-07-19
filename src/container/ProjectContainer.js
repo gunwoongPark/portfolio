@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
-import ProjectPresenter from "./ProjectPresenter";
+import Project from "../components/Project";
 import { useMediaQuery } from "react-responsive";
 
-import semtle1 from "../../../assets/semtle/semtle1.PNG";
-import semtle2 from "../../../assets/semtle/semtle2.PNG";
-import semtle3 from "../../../assets/semtle/semtle3.PNG";
-import semtle4 from "../../../assets/semtle/semtle4.PNG";
-import semtle5 from "../../../assets/semtle/semtle5.PNG";
-import semtle6 from "../../../assets/semtle/semtle6.PNG";
-import semtle7 from "../../../assets/semtle/semtle7.PNG";
-import semtle8 from "../../../assets/semtle/semtle8.PNG";
-import semtle9 from "../../../assets/semtle/semtle9.PNG";
-import semtle10 from "../../../assets/semtle/semtle10.PNG";
+import semtle1 from "../assets/semtle/semtle1.PNG";
+import semtle2 from "../assets/semtle/semtle2.PNG";
+import semtle3 from "../assets/semtle/semtle3.PNG";
+import semtle4 from "../assets/semtle/semtle4.PNG";
+import semtle5 from "../assets/semtle/semtle5.PNG";
+import semtle6 from "../assets/semtle/semtle6.PNG";
+import semtle7 from "../assets/semtle/semtle7.PNG";
+import semtle8 from "../assets/semtle/semtle8.PNG";
+import semtle9 from "../assets/semtle/semtle9.PNG";
+import semtle10 from "../assets/semtle/semtle10.PNG";
 
-import vueticky1 from "../../../assets/vueticky/vueticky1.png";
-import vueticky2 from "../../../assets/vueticky/vueticky2.png";
-import vueticky3 from "../../../assets/vueticky/vueticky3.png";
-import vueticky4 from "../../../assets/vueticky/vueticky4.png";
-import vueticky5 from "../../../assets/vueticky/vueticky5.png";
+import vueticky1 from "../assets/vueticky/vueticky1.png";
+import vueticky2 from "../assets/vueticky/vueticky2.png";
+import vueticky3 from "../assets/vueticky/vueticky3.png";
+import vueticky4 from "../assets/vueticky/vueticky4.png";
+import vueticky5 from "../assets/vueticky/vueticky5.png";
 
-import ycde1 from "../../../assets/youcandoeat/main.jpg";
-import ycde2 from "../../../assets/youcandoeat/sidebar.jpg";
-import ycde3 from "../../../assets/youcandoeat/select.jpg";
-import ycde4 from "../../../assets/youcandoeat/cropping.jpg";
-import ycde5 from "../../../assets/youcandoeat/result.jpg";
-import ycde6 from "../../../assets/youcandoeat/community.jpg";
+import ycde1 from "../assets/youcandoeat/main.jpg";
+import ycde2 from "../assets/youcandoeat/sidebar.jpg";
+import ycde3 from "../assets/youcandoeat/select.jpg";
+import ycde4 from "../assets/youcandoeat/cropping.jpg";
+import ycde5 from "../assets/youcandoeat/result.jpg";
+import ycde6 from "../assets/youcandoeat/community.jpg";
 
 function ProjectContainer() {
   const projects = [
@@ -119,7 +119,7 @@ function ProjectContainer() {
 
   return (
     <>
-      <ProjectPresenter projects={projects} mode={mode} />
+      <Project projects={projects} mode={mode} />
     </>
   );
 }

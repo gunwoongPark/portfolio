@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import HeaderPresenter from "./HeaderPresenter";
+import Header from "../components/Header";
 import { useMediaQuery } from "react-responsive";
 
 function HeaderContainer() {
@@ -115,7 +115,7 @@ function HeaderContainer() {
 
   return (
     <>
-      <HeaderPresenter
+      <Header
         Home={state.Home}
         About={state.About}
         Skills={state.Skills}
