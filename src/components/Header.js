@@ -185,16 +185,7 @@ function HeaderPresenter({
 }) {
   return (
     <>
-      <DarkBackground sidebar={sidebar} />
-      {sidebar ? (
-        <TimelineContainer sidebar={sidebar} setSidebar={setSidebar} />
-      ) : null}
-
-      {/* <SideBarBlock sidebar={sidebar}>
-        <CloseBtn onClick={() => setSidebar(false)}>
-          <GrClose size="30" />
-        </CloseBtn>
-      </SideBarBlock> */}
+      <TimelineContainer sidebar={sidebar} setSidebar={setSidebar} />
 
       <HeaderContainer pos={pos} mode={mode}>
         <Title mode={mode}>
