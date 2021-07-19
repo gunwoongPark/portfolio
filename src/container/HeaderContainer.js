@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { useMediaQuery } from "react-responsive";
 
-function HeaderContainer() {
+function HeaderContainer({ sidebar, setSidebar }) {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
@@ -29,8 +29,8 @@ function HeaderContainer() {
       bottom: 0,
     },
   });
-  let [mode, setMode] = useState("");
-  let [open, setOpen] = useState(false);
+  const [mode, setMode] = useState("");
+  const [open, setOpen] = useState(false);
 
   // responsive design useEffect
   useEffect(() => {
@@ -124,6 +124,8 @@ function HeaderContainer() {
         mode={mode}
         open={open}
         toggleHamburger={toggleHamburger}
+        sidebar={sidebar}
+        setSidebar={setSidebar}
       />
     </>
   );

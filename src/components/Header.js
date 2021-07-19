@@ -1,7 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdTimeline } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
+import TimelineContainer from "../container/TimelineContainer";
 
 const HeaderContainer = styled.div`
   background: white;
@@ -48,8 +50,9 @@ const LinkContainer = styled.ul`
     props.mode === "isPc"
       ? css`
           display: flex;
+          align-items: center;
           list-style: none;
-          margin: 0 50px 0 0;
+          margin: 0 1rem 0 0;
         `
       : css`
           padding-left: 0;
@@ -64,6 +67,21 @@ const LinkContainer = styled.ul`
           text-align: -webkit-center;
           z-index: -1;
         `};
+`;
+
+const TimelineBtn = styled.button`
+  margin-left: 1rem;
+  color: black;
+  background: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  &:active {
+    filter: brightness(80%);
+  }
 `;
 
 const HamburgerBtn = styled.button`
@@ -94,9 +112,12 @@ const LinkBtn = styled.li`
   ${(props) =>
     props.mode === "isPc" &&
     css`
-      margin-left: 20px;
+      & + & {
+        margin-left: 20px;
+      }
       border-bottom: 3px solid
         ${(props) => (props.current ? "#000080" : "white")};
+
       transition: border-bottom 0.2s ease-in;
     `}
 
@@ -137,6 +158,19 @@ const Cover = styled.div`
     `}
 `;
 
+const DarkBackground = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+
+  z-index: ${(props) => (props.sidebar ? "9" : "-1")};
+  opacity: ${(props) => (props.sidebar ? "1" : "0")};
+  transition: opacity 0.5s ease-out;
+`;
+
 function HeaderPresenter({
   Home,
   About,
@@ -146,9 +180,22 @@ function HeaderPresenter({
   mode,
   open,
   toggleHamburger,
+  sidebar,
+  setSidebar,
 }) {
   return (
     <>
+      <DarkBackground sidebar={sidebar} />
+      {sidebar ? (
+        <TimelineContainer sidebar={sidebar} setSidebar={setSidebar} />
+      ) : null}
+
+      {/* <SideBarBlock sidebar={sidebar}>
+        <CloseBtn onClick={() => setSidebar(false)}>
+          <GrClose size="30" />
+        </CloseBtn>
+      </SideBarBlock> */}
+
       <HeaderContainer pos={pos} mode={mode}>
         <Title mode={mode}>
           gunwoong<P>P</P>ark
@@ -179,6 +226,10 @@ function HeaderPresenter({
           <LinkBtn mode={mode} current={pos >= Project.top}>
             <LinkItem href="#Project">Project</LinkItem>
           </LinkBtn>
+
+          <TimelineBtn onClick={() => setSidebar(true)}>
+            <MdTimeline size="30" />
+          </TimelineBtn>
         </LinkContainer>
       </HeaderContainer>
     </>

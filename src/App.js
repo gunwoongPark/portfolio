@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./container/HeaderContainer";
 import Footer from "./container/Footer";
 import Home from "./container/Home";
@@ -5,7 +6,7 @@ import About from "./container/About";
 import Skills from "./container/SkillsContainer";
 import Project from "./container/ProjectContainer";
 
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 import "./App.css";
 
@@ -20,11 +21,21 @@ pre{
 
 html{
   scroll-behavior: smooth;
+  ${(props) =>
+    props.sidebar &&
+    css`
+      overflow-y: hidden;
+    `}
 }
 
 body{
   -ms-overflow-style: none; 
-  background: #e9ecef; 
+  background: #e9ecef;
+  ${(props) =>
+    props.sidebar &&
+    css`
+      overflow-y: hidden;
+    `}
 }
 
 body::-webkit-scrollbar{
@@ -33,10 +44,11 @@ body::-webkit-scrollbar{
 `;
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <>
-      <GlobalStyle />
-      <Header />
+      <GlobalStyle sidebar={sidebar} />
+      <Header sidebar={sidebar} setSidebar={setSidebar} />
       <Home id="Home" />
       <About id="About" />
       <Skills id="Skills" />
