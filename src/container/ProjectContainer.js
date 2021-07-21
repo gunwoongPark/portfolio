@@ -98,6 +98,7 @@ function ProjectContainer() {
       (백 엔드 동작 X)`,
       tag: [
         "React",
+        "Styled Components",
         "Redux",
         "Firebase",
         "PWA",
