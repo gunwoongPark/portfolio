@@ -1,10 +1,12 @@
-import Header from "./components/Header/HeaderContainer";
-import Footer from "./components/Footer";
-import Home from "./components/Body/Home";
-import About from "./components/Body/About";
-import Skills from "./components/Body/Skill/SkillsContainer";
-import Project from "./components/Body/Project/ProjectContainer";
-import { createGlobalStyle } from "styled-components";
+import React, { useState } from "react";
+import Header from "./container/HeaderContainer";
+import Footer from "./container/Footer";
+import Home from "./container/Home";
+import About from "./container/About";
+import Skills from "./container/SkillsContainer";
+import Project from "./container/ProjectContainer";
+
+import { createGlobalStyle, css } from "styled-components";
 
 import "./App.css";
 
@@ -19,11 +21,21 @@ pre{
 
 html{
   scroll-behavior: smooth;
+  ${(props) =>
+    props.sidebar &&
+    css`
+      overflow-y: hidden;
+    `}
 }
 
 body{
   -ms-overflow-style: none; 
-  background: #e9ecef; 
+  background: #e9ecef;
+  ${(props) =>
+    props.sidebar &&
+    css`
+      overflow-y: hidden;
+    `}
 }
 
 body::-webkit-scrollbar{
@@ -32,10 +44,11 @@ body::-webkit-scrollbar{
 `;
 
 function App() {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <>
-      <GlobalStyle />
-      <Header />
+      <GlobalStyle sidebar={sidebar} />
+      <Header sidebar={sidebar} setSidebar={setSidebar} />
       <Home id="Home" />
       <About id="About" />
       <Skills id="Skills" />
