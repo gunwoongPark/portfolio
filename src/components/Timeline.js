@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
 
-const Container = styled.div`
+const SidebarBlock = styled.div`
   position: fixed;
   top: 0%;
   text-align: right;
@@ -29,6 +29,13 @@ const CloseBtn = styled.button`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
 const DarkBackground = styled.div`
   position: fixed;
   left: 0;
@@ -46,11 +53,14 @@ function Timeline({ sidebar, setSidebar }) {
   return (
     <>
       <DarkBackground sidebar={sidebar} />
-      <Container sidebar={sidebar}>
+      <SidebarBlock sidebar={sidebar}>
         <CloseBtn onClick={() => setSidebar(false)}>
           <GrClose size="30" />
         </CloseBtn>
-      </Container>
+        <Container>
+          <h1>타임라인 공사중입니다!</h1>
+        </Container>
+      </SidebarBlock>
     </>
   );
 }
