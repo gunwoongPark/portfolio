@@ -67,7 +67,6 @@ function About() {
           </h1>
         </Col>
       </Row>
-
       <Row className="content mt-5">
         <PhotoContainer className="col">
           <Portrait src={image} />
@@ -117,7 +116,7 @@ function About() {
                 >
                   금오공과대학교
                 </Anchor>
-                <p style={{ display: 'inline', fontSize: '17px' }}> / </p>
+                <p style={{ display: "inline", fontSize: "17px" }}> / </p>
                 <Anchor
                   style={{ margin: "0", fontSize: "17px" }}
                   href="https://ce.kumoh.ac.kr/ce/index.do"
