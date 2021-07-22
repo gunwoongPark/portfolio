@@ -24,6 +24,7 @@ const SidebarBlock = styled.div`
 `;
 
 const CloseBtn = styled.button`
+  position: fixed;
   float: left;
   margin: 0.5rem 0 0 0.5rem;
   border: none;
@@ -61,7 +62,16 @@ function Timeline({ sidebar, setSidebar, timeLine }) {
           {timeLine.map((el, index) => (
             <VerticalTimelineElement
               date={el.date}
-              iconStyle={{ background: " #ffa8a8", color: "#fff" }}
+              iconStyle={{ background: " #74c0fc", color: "#fff" }}
+              icon={
+                el.category === "lab" ? (
+                  <ImLab />
+                ) : el.category === "mentor" ? (
+                  <GiTeacher />
+                ) : (
+                  <AiOutlineProject />
+                )
+              }
             >
               <h3>{el.title}</h3>
               <p>{el.content}</p>
