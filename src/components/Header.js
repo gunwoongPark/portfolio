@@ -69,21 +69,6 @@ const LinkContainer = styled.ul`
         `};
 `;
 
-const TimelineBtn = styled.button`
-  margin-left: 1rem;
-  color: black;
-  background: white;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  border-radius: 1rem;
-  padding: 0.5rem;
-
-  &:active {
-    filter: brightness(80%);
-  }
-`;
-
 const HamburgerBtn = styled.button`
   display: none;
 
@@ -101,6 +86,34 @@ const HamburgerBtn = styled.button`
         filter: brightness(80%);
       }
     `}
+`;
+
+const TimelineBtn = styled.button`
+  ${(props) =>
+    props.mode === "isPc" &&
+    css`
+      margin-left: 20px;
+    `}
+
+  ${(props) =>
+    props.mode === "isMobile" &&
+    css`
+      margin: 1rem 0 1rem 0;
+      width: 75%;
+      display: block;
+    `}
+
+  color: black;
+  background: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  &:active {
+    filter: brightness(80%);
+  }
 `;
 
 const LinkBtn = styled.li`
@@ -205,7 +218,7 @@ function HeaderPresenter({
             <LinkItem href="#Project">Project</LinkItem>
           </LinkBtn>
 
-          <TimelineBtn onClick={() => setSidebar(true)}>
+          <TimelineBtn onClick={() => setSidebar(true)} mode={mode}>
             <MdTimeline size="30" />
           </TimelineBtn>
         </LinkContainer>
