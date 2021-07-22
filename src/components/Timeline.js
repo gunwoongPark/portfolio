@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GrClose } from "react-icons/gr";
+import { BsArrowBarRight } from "react-icons/bs";
 import { ImLab } from "react-icons/im";
 import { GiTeacher } from "react-icons/gi";
 import { AiOutlineProject } from "react-icons/ai";
@@ -25,12 +25,17 @@ const SidebarBlock = styled.div`
 
 const CloseBtn = styled.button`
   position: fixed;
-  float: left;
-  margin: 0.5rem 0 0 0.5rem;
+  z-index: 10;
+
+  top: 50%;
+  left: 7.5%;
+  transform: translate(-50%, -50%);
+
   border: none;
   outline: none;
-  background: #e9ecef;
-  border-radius: 8px;
+
+  background: none;
+  color: white;
 
   &:active {
     filter: brightness(85%);
@@ -50,14 +55,18 @@ const DarkBackground = styled.div`
   transition: opacity 0.25s ease-out;
 `;
 
-function Timeline({ sidebar, setSidebar, timeLine }) {
+function Timeline({ sidebar, setSidebar, timeLine, mode }) {
   return (
     <>
       <DarkBackground sidebar={sidebar} />
-      <SidebarBlock sidebar={sidebar}>
+
+      {sidebar ? (
         <CloseBtn onClick={() => setSidebar(false)}>
-          <GrClose size="30" />
+          <BsArrowBarRight size={mode === "isPc" ? 56 : 42} />
         </CloseBtn>
+      ) : null}
+
+      <SidebarBlock sidebar={sidebar}>
         <VerticalTimeline>
           {timeLine.map((el, index) => (
             <VerticalTimelineElement

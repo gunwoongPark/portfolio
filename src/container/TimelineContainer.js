@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Timeline from "../components/Timeline";
 
-import { ImLab } from "react-icons/im";
+import { useMediaQuery } from "react-responsive";
 
 function TimelineContainer({ sidebar, setSidebar }) {
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
   const timeLine = [
     {
       id: 0,
@@ -118,8 +124,20 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
   ];
 
+  const [mode, setMode] = useState("");
+
+  useEffect(() => {
+    if (isPc) setMode("isPc");
+    else if (isMobile) setMode("isMobile");
+  }, [isMobile, isPc]);
+
   return (
-    <Timeline sidebar={sidebar} setSidebar={setSidebar} timeLine={timeLine} />
+    <Timeline
+      sidebar={sidebar}
+      setSidebar={setSidebar}
+      timeLine={timeLine}
+      mode={mode}
+    />
   );
 }
 
