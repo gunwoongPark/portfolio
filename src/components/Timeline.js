@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
 
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
 const SidebarBlock = styled.div`
   position: fixed;
   top: 0%;
