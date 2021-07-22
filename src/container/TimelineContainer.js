@@ -6,6 +6,7 @@ import { ImLab } from "react-icons/im";
 function TimelineContainer({ sidebar, setSidebar }) {
   const timeLine = [
     {
+      id: 0,
       date: "2020.02 - 2020.09",
       title: "Intelligent Image Analysis Lab",
       content: "지능형 영상분석 연구실 연구원 활동",
@@ -13,6 +14,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 1,
       date: "2020.03 - 2020.06",
       title: "셈틀꾼 멘토",
       content:
@@ -21,6 +23,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 2,
       date: "2020.07 - 2020.10",
       title: "Semtle Project",
       content: "셈틀꾼 공식 홈페이지 구현 프로젝트 진행",
@@ -28,6 +31,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 3,
       date: "2020.09 - 2020.12",
       title: "셈틀꾼 멘토",
       content:
@@ -36,6 +40,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 4,
       date: "2020.09 - 2020.12",
       title: "Vueticky Note Project",
       content:
@@ -44,6 +49,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 5,
       date: "2020.10 - 2020.12",
       title: "전공특화 멘토",
       content:
@@ -52,6 +58,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 6,
       date: "2020.10 - present",
       title: "System Software Lab",
       content: "시스템 소프트웨어 연구실 연구원 활동",
@@ -59,6 +66,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 7,
       date: "2020.12 - 2021.02",
       title: "System Software Lab",
       content:
@@ -67,6 +75,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 8,
       date: "2021.02 - 2021.03",
       title: "셈틀꾼 멘토",
       content:
@@ -75,6 +84,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 9,
       date: "2021.03 - 2021.06",
       title: "셈틀꾼 멘토",
       content:
@@ -83,6 +93,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 10,
       date: "2021.03 - 2021.07",
       title: "YouCanDoEat Project",
       content: "외국인 대상 식자재 정보 제공 웹앱 구현 프로젝트 진행.",
@@ -90,6 +101,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 11,
       date: "2021.07 - present",
       title: "Cytoscape dev-blog Project",
       content:
@@ -98,6 +110,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
+      id: 12,
       date: "2021.07 - present",
       title: "Semtle Project Renewal",
       content: "셈틀꾼 홈페이지 리뉴얼 및 유지보수 작업",

@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
+import { ImLab } from "react-icons/im";
+import { GiTeacher } from "react-icons/gi";
+import { AiOutlineProject } from "react-icons/ai";
 
 import {
   VerticalTimeline,
@@ -11,15 +14,13 @@ import "react-vertical-timeline-component/style.min.css";
 const SidebarBlock = styled.div`
   position: fixed;
   top: 0%;
-  text-align: right;
   height: 100%;
   width: 85%;
-  background: white;
+  background: #e9ecef;
   z-index: 10;
-
   right: ${(props) => (props.sidebar ? "0%" : "-85%")};
-
   transition: right 0.5s ease-out;
+  overflow-y: auto;
 `;
 
 const CloseBtn = styled.button`
@@ -27,19 +28,12 @@ const CloseBtn = styled.button`
   margin: 0.5rem 0 0 0.5rem;
   border: none;
   outline: none;
-  background: white;
+  background: #e9ecef;
   border-radius: 8px;
 
   &:active {
     filter: brightness(85%);
   }
-`;
-
-const Container = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
 `;
 
 const DarkBackground = styled.div`
@@ -55,7 +49,7 @@ const DarkBackground = styled.div`
   transition: opacity 0.25s ease-out;
 `;
 
-function Timeline({ sidebar, setSidebar }) {
+function Timeline({ sidebar, setSidebar, timeLine }) {
   return (
     <>
       <DarkBackground sidebar={sidebar} />
@@ -63,9 +57,17 @@ function Timeline({ sidebar, setSidebar }) {
         <CloseBtn onClick={() => setSidebar(false)}>
           <GrClose size="30" />
         </CloseBtn>
-        <Container>
-          <h1>타임라인 공사중입니다!</h1>
-        </Container>
+        <VerticalTimeline>
+          {timeLine.map((el, index) => (
+            <VerticalTimelineElement
+              date={el.date}
+              iconStyle={{ background: " #ffa8a8", color: "#fff" }}
+            >
+              <h3>{el.title}</h3>
+              <p>{el.content}</p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </SidebarBlock>
     </>
   );
