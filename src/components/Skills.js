@@ -2,6 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
+const CustomContainer = styled(Container)`
+  padding-top: 90px;
+  margin-top: 30px;
+  padding-bottom: 70px;
+`;
+
 const SkillContainer = styled.div`
   width: 86px;
   height: auto;
@@ -17,22 +23,15 @@ const S = styled.h1`
 `;
 
 const NameContainer = styled.div`
-display:flex;
-justify-content:center;
-`
+  display: flex;
+  justify-content: center;
+`;
 
 function SkillsPresenter({ skills }) {
   return (
     <>
       <hr />
-      <Container
-        id="Skills"
-        style={{
-          paddingTop: "90px",
-          marginTop: "30px",
-          paddingBottom: "70px",
-        }}
-      >
+      <CustomContainer id="Skills">
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>
@@ -59,7 +58,7 @@ function SkillsPresenter({ skills }) {
             </Col>
           ))}
         </Row>
-      </Container>
+      </CustomContainer>
     </>
   );
 }

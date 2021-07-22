@@ -5,12 +5,19 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { MdMail, MdCall } from "react-icons/md";
 import { FaUniversity } from "react-icons/fa";
+import { ImLink } from "react-icons/im";
 import image from "../assets/myphoto.jpg";
+
+const CustomContainer = styled(Container)`
+  padding-top: 90px;
+  margin-top: 30px;
+  padding-bottom: 70px;
+`;
 
 const Portrait = styled.img`
   object-fit: cover;
   border-radius: 50%;
-  width: 300px;
+  width: 400px;
 `;
 
 const ContentContainer = styled.ul`
@@ -54,12 +61,26 @@ const Anchor = styled.a`
   }
 `;
 
+// const FlexRow = styled(Row)`
+//   display: flex;
+//   justify-content: space-evenly;
+// `;
+
+// const Values = styled.div`
+//   width: 200px;
+//   height: 200px;
+//   background: #1864ab;
+//   color: white;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 1.5rem;
+//   border-radius: 15%;
+// `;
+
 function About() {
   return (
-    <Container
-      id="About"
-      style={{ paddingTop: "90px", marginTop: "30px", paddingBottom: "70px" }}
-    >
+    <CustomContainer id="About">
       <Row className="mt-5 title">
         <Col>
           <h1 style={{ fontSize: "45px" }}>
@@ -163,6 +184,24 @@ function About() {
               </div>
             </li>
           </ContentContainer>
+
+          <ContentContainer>
+            <li className="Velog" style={{ display: "flex" }}>
+              <IconContainer>
+                <ImLink size="30" />
+              </IconContainer>
+              <div style={{ marginLeft: "24px" }}>
+                <h5 style={{ margin: "0" }}>velog :</h5>
+                <Anchor
+                  style={{ margin: "0", fontSize: "17px" }}
+                  href="https://velog.io/@bung1438"
+                  target="__blank"
+                >
+                  https://velog.io/@bung1438
+                </Anchor>
+              </div>
+            </li>
+          </ContentContainer>
         </Col>
       </Row>
       <Row className="mt-5 mb-5">
@@ -179,7 +218,14 @@ function About() {
           </IntroduceText>
         </Col>
       </Row>
-    </Container>
+
+      {/* <FlexRow>
+        <Values>Detail</Values>
+        <Values>Change</Values>
+        <Values>Concentration</Values>
+        <Values>Community</Values>
+      </FlexRow> */}
+    </CustomContainer>
   );
 }
 

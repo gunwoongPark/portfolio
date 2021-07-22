@@ -7,6 +7,11 @@ import { VscLinkExternal } from "react-icons/vsc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const CustomContainer = styled(Container)`
+  padding-top: 90px;
+  margin-top: 30px;
+`;
+
 const ProjectContainer = styled.div`
   text-align: center;
   background: white;
@@ -124,7 +129,7 @@ function ProjectPresenter({ projects, mode }) {
   return (
     <>
       <hr />
-      <Container id="Project" style={{ paddingTop: "90px", marginTop: "30px" }}>
+      <CustomContainer id="Project">
         <Row className="mt-5 title">
           <Col>
             <h1 style={{ fontSize: "45px" }}>
@@ -174,7 +179,7 @@ function ProjectPresenter({ projects, mode }) {
             </Col>
           </Row>
         ))}
-      </Container>
+      </CustomContainer>
     </>
   );
 }

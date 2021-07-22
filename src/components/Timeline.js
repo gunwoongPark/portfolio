@@ -68,8 +68,9 @@ function Timeline({ sidebar, setSidebar, timeLine, mode }) {
 
       <SidebarBlock sidebar={sidebar}>
         <VerticalTimeline>
-          {timeLine.map((el, index) => (
+          {timeLine.map((el) => (
             <VerticalTimelineElement
+              key={el.id}
               date={el.date}
               iconStyle={{ background: " #74c0fc", color: "#fff" }}
               icon={
