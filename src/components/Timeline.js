@@ -72,7 +72,7 @@ function Timeline({ sidebar, setSidebar, timeLine, mode }) {
             <VerticalTimelineElement
               key={el.id}
               date={el.date}
-              iconStyle={{ background: " #74c0fc", color: "#fff" }}
+              iconStyle={{ background: " #1864ab", color: "#fff" }}
               icon={
                 el.category === "lab" ? (
                   <ImLab />

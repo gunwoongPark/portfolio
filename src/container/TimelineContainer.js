@@ -22,7 +22,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     {
       id: 1,
       date: "2020.03 - 2020.06",
-      title: "셈틀꾼 멘토",
+      title: "셈틀꾼 멘토(C++)",
       content:
         "컴퓨터공학과 학술동아리 '셈틀꾼'에서 20학년도 2학년 부원들을 대상으로 C++ 전공과목 멘토를 진행함.",
       category: "mentor",
@@ -39,7 +39,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     {
       id: 3,
       date: "2020.09 - 2020.12",
-      title: "셈틀꾼 멘토",
+      title: "셈틀꾼 멘토(C)",
       content:
         "컴퓨터공학과 학술동아리 '셈틀꾼'에서 20학년도 신입생 부원들을 대상으로 C 전공과목 멘토를 진행함.",
       category: "mentor",
@@ -57,7 +57,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     {
       id: 5,
       date: "2020.10 - 2020.12",
-      title: "전공특화 멘토",
+      title: "전공특화 멘토(C)",
       content:
         "전공특화 멘토링 C언어 멘토로 선정되어 신입생들을 대상으로 해당 분야의 이해를 돕기위한 멘토링을 진행함.",
       category: "mentor",
@@ -83,7 +83,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     {
       id: 8,
       date: "2021.02 - 2021.03",
-      title: "셈틀꾼 멘토",
+      title: "셈틀꾼 멘토(JavaScript)",
       content:
         "컴퓨터공학과 학술동아리 '셈틀꾼'에서 전 회원들을 대상으로 자바스크립트 멘토를 진행함.",
       category: "mentor",
@@ -92,7 +92,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     {
       id: 9,
       date: "2021.03 - 2021.06",
-      title: "셈틀꾼 멘토",
+      title: "셈틀꾼 멘토(HTML, CSS, JS)",
       content:
         "컴퓨터공학과 학술동아리 '셈틀꾼'에서 전 회원들을 대상으로 웹 프로그래밍 멘토를 진행함.",
       category: "mentor",
