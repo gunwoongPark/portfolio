@@ -7,6 +7,7 @@ import { MdMail, MdCall } from "react-icons/md";
 import { FaUniversity } from "react-icons/fa";
 import { ImLink } from "react-icons/im";
 import image from "../assets/myphoto.jpg";
+import companyImg from "../assets/company.png"
 
 const CustomContainer = styled(Container)`
   padding-top: 90px;
@@ -17,7 +18,7 @@ const CustomContainer = styled(Container)`
 const Portrait = styled.img`
   object-fit: cover;
   border-radius: 50%;
-  width: 400px;
+  width: 500px;
 `;
 
 const ContentContainer = styled.ul`
@@ -60,23 +61,6 @@ const Anchor = styled.a`
     color: black;
   }
 `;
-
-// const FlexRow = styled(Row)`
-//   display: flex;
-//   justify-content: space-evenly;
-// `;
-
-// const Values = styled.div`
-//   width: 200px;
-//   height: 200px;
-//   background: #1864ab;
-//   color: white;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 1.5rem;
-//   border-radius: 15%;
-// `;
 
 function About() {
   return (
@@ -151,6 +135,24 @@ function About() {
           </ContentContainer>
 
           <ContentContainer>
+            <li className="Company" style={{ display: "flex" }}>
+              <IconContainer>
+                <img style={{width:"30px"}} src={companyImg} alt="company png"/>
+              </IconContainer>
+              <div style={{ marginLeft: "24px" }}>
+                <h5 style={{ margin: "0" }}>Company :</h5>
+                <Anchor
+                  style={{ margin: "0", fontSize: "17px" }}
+                  href="http://logibros.com/"
+                  target="__blank"
+                >
+                  로지브라더스
+                </Anchor>
+              </div>
+            </li>
+          </ContentContainer>
+
+          <ContentContainer>
             <li className="EMail" style={{ display: "flex" }}>
               <IconContainer>
                 <MdMail size="30" />
@@ -207,7 +209,7 @@ function About() {
       <Row className="mt-5 mb-5">
         <Col style={{ textAlign: "center" }}>
           <IntroduceText>
-            눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 프론트 엔드 개발자가
+            눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 유능한 프론트 엔드 개발자가
             되기 위해 노력하는 대학생입니다.
             <br />
             빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가
@@ -219,12 +221,6 @@ function About() {
         </Col>
       </Row>
 
-      {/* <FlexRow>
-        <Values>Detail</Values>
-        <Values>Change</Values>
-        <Values>Concentration</Values>
-        <Values>Community</Values>
-      </FlexRow> */}
     </CustomContainer>
   );
 }
