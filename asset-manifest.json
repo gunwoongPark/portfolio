@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.17aa3a77.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.17aa3a77.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.a0fe5b25.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.a0fe5b25.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.7a690346.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.7a690346.js.map",
     "static/css/2.a075405c.chunk.css": "/portfolio/static/css/2.a075405c.chunk.css",
@@ -16,6 +16,7 @@
     "static/js/2.356d4507.chunk.js.LICENSE.txt": "/portfolio/static/js/2.356d4507.chunk.js.LICENSE.txt",
     "static/media/App.css": "/portfolio/static/media/NanumSquare_acR.4e7e79f4.ttf",
     "static/media/community.37eab74b.jpg": "/portfolio/static/media/community.37eab74b.jpg",
+    "static/media/company.ed0b796f.png": "/portfolio/static/media/company.ed0b796f.png",
     "static/media/cropping.6aa3f997.jpg": "/portfolio/static/media/cropping.6aa3f997.jpg",
     "static/media/css.8bffe648.png": "/portfolio/static/media/css.8bffe648.png",
     "static/media/firebase.18e8cd69.png": "/portfolio/static/media/firebase.18e8cd69.png",
@@ -54,6 +55,6 @@
     "static/css/2.a075405c.chunk.css",
     "static/js/2.356d4507.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.17aa3a77.chunk.js"
+    "static/js/main.a0fe5b25.chunk.js"
   ]
 }
