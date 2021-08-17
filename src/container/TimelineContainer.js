@@ -122,6 +122,14 @@ function TimelineContainer({ sidebar, setSidebar }) {
       content: "셈틀꾼 홈페이지 리뉴얼 및 유지보수 작업",
       category: "project",
     },
+
+    {
+      id: 13,
+      date: "2021.07 - present",
+      title: "로지브라더스",
+      content: "스타트업 로지브라더스 프론트 엔드 개발 업무",
+      category: "company",
+    },
   ];
 
   const [mode, setMode] = useState("");

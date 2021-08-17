@@ -4,6 +4,7 @@ import { BsArrowBarRight } from "react-icons/bs";
 import { ImLab } from "react-icons/im";
 import { GiTeacher } from "react-icons/gi";
 import { AiOutlineProject } from "react-icons/ai";
+import { BsGearFill } from "react-icons/bs"
 
 import {
   VerticalTimeline,
@@ -78,9 +79,9 @@ function Timeline({ sidebar, setSidebar, timeLine, mode }) {
                   <ImLab />
                 ) : el.category === "mentor" ? (
                   <GiTeacher />
-                ) : (
+                ) : el.category === "project" ? (
                   <AiOutlineProject />
-                )
+                ) : <BsGearFill/>
               }
             >
               <h3>{el.title}</h3>
