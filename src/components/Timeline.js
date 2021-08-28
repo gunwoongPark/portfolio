@@ -12,6 +12,44 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+function Timeline ({ sidebar, setSidebar, timeLine, mode }) {
+  return (
+    <>
+      <DarkBackground sidebar={sidebar} onClick={() => setSidebar(false)} />
+
+      {sidebar ? (
+        <CloseBtn onClick={() => setSidebar(false)}>
+          <BsArrowBarRight size={mode === "isPc" ? 56 : 42} />
+        </CloseBtn>
+      ) : null}
+
+      <SidebarBlock sidebar={sidebar}>
+        <VerticalTimeline>
+          {timeLine.map((el) => (
+            <VerticalTimelineElement
+              key={el.id}
+              date={el.date}
+              iconStyle={{ background: " #1864ab", color: "#fff" }}
+              icon={
+                el.category === "lab" ? (
+                  <ImLab />
+                ) : el.category === "mentor" ? (
+                  <GiTeacher />
+                ) : el.category === "project" ? (
+                  <AiOutlineProject />
+                ) : <BsGearFill />
+              }
+            >
+              <h3>{el.title}</h3>
+              <p>{el.content}</p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </SidebarBlock>
+    </>
+  );
+}
+
 const SidebarBlock = styled.div`
   position: fixed;
   top: 0%;
@@ -55,43 +93,5 @@ const DarkBackground = styled.div`
   opacity: ${(props) => (props.sidebar ? "1" : "0")};
   transition: opacity 0.25s ease-out;
 `;
-
-function Timeline({ sidebar, setSidebar, timeLine, mode }) {
-  return (
-    <>
-      <DarkBackground sidebar={sidebar} />
-
-      {sidebar ? (
-        <CloseBtn onClick={() => setSidebar(false)}>
-          <BsArrowBarRight size={mode === "isPc" ? 56 : 42} />
-        </CloseBtn>
-      ) : null}
-
-      <SidebarBlock sidebar={sidebar}>
-        <VerticalTimeline>
-          {timeLine.map((el) => (
-            <VerticalTimelineElement
-              key={el.id}
-              date={el.date}
-              iconStyle={{ background: " #1864ab", color: "#fff" }}
-              icon={
-                el.category === "lab" ? (
-                  <ImLab />
-                ) : el.category === "mentor" ? (
-                  <GiTeacher />
-                ) : el.category === "project" ? (
-                  <AiOutlineProject />
-                ) : <BsGearFill/>
-              }
-            >
-              <h3>{el.title}</h3>
-              <p>{el.content}</p>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
-      </SidebarBlock>
-    </>
-  );
-}
 
 export default Timeline;

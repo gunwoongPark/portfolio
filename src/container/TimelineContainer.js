@@ -3,7 +3,7 @@ import Timeline from "../components/Timeline";
 
 import { useMediaQuery } from "react-responsive";
 
-function TimelineContainer({ sidebar, setSidebar }) {
+function TimelineContainer ({ sidebar, setSidebar }) {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
