@@ -2,7 +2,6 @@ import React from "react";
 import Skills from "../components/Skills";
 
 import reactIcon from "../assets/react.png";
-import bootstrapIcon from "../assets/bootstrap.png";
 import vueIcon from "../assets/vue.png";
 import htmlIcon from "../assets/html.png";
 import cssIcon from "../assets/css.png";
@@ -26,7 +25,6 @@ function SkillsContainer () {
     { name: "React", icon: reactIcon },
     { name: "Redux", icon: reduxIcon },
     { name: "styled components", icon: scIcon },
-    { name: "Bootstrap", icon: bootstrapIcon },
     { name: "Git", icon: gitIcon },
     { name: "Python", icon: pyIcon },
     { name: "Firebase", icon: fbIcon },

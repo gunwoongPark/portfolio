@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
+
 import { Container, Row, Col } from "react-bootstrap";
 import { FaBirthdayCake } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
@@ -7,7 +8,9 @@ import { MdMail, MdCall } from "react-icons/md";
 import { FaUniversity } from "react-icons/fa";
 import { ImLink } from "react-icons/im";
 import image from "../assets/myphoto.jpg";
-import companyImg from "../assets/company.png"
+import companyImg from "../assets/company.png";
+
+import { useMediaQuery } from 'react-responsive';
 
 const CustomContainer = styled(Container)`
   padding-top: 90px;
@@ -18,7 +21,7 @@ const CustomContainer = styled(Container)`
 const Portrait = styled.img`
   object-fit: cover;
   border-radius: 50%;
-  width: 500px;
+  ${(props) => props.mode === "isPc" ? css`width:500px;` : css`width:350px;`};
 `;
 
 const ContentContainer = styled.ul`
@@ -28,7 +31,7 @@ const ContentContainer = styled.ul`
 `;
 
 const IconContainer = styled.span`
-  display: felx;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;
@@ -62,7 +65,21 @@ const Anchor = styled.a`
   }
 `;
 
-function About() {
+function About () {
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
+  const [mode, setMode] = useState("");
+
+  useEffect(() => {
+    if (isPc) setMode("isPc");
+    else if (isMobile) setMode("isMobile");
+  }, [isMobile, isPc])
+
   return (
     <CustomContainer id="About">
       <Row className="mt-5 title">
@@ -75,7 +92,7 @@ function About() {
 
       <Row className="content mt-5">
         <PhotoContainer className="col">
-          <Portrait src={image} />
+          <Portrait src={image} mode={mode} />
         </PhotoContainer>
 
         <Col>
@@ -137,7 +154,7 @@ function About() {
           <ContentContainer>
             <li className="Company" style={{ display: "flex" }}>
               <IconContainer>
-                <img style={{width:"30px"}} src={companyImg} alt="company png"/>
+                <img style={{ width: "30px" }} src={companyImg} alt="company png" />
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>Company :</h5>
@@ -210,7 +227,7 @@ function About() {
         <Col style={{ textAlign: "center" }}>
           <IntroduceText>
             눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 유능한 프론트 엔드 개발자가
-            되기 위해 노력하는 대학생입니다.
+            되기 위해 노력합니다.
             <br />
             빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가
             되기 위해 노력하고 있습니다.
