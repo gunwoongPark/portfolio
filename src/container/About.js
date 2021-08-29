@@ -160,7 +160,7 @@ function About () {
                 <h5 style={{ margin: "0" }}>Company :</h5>
                 <Anchor
                   style={{ margin: "0", fontSize: "17px" }}
-                  href="http://logibros.com/"
+                  href="https://thewaytosunset.notion.site/thewaytosunset/We-Are-LOGI-BROTHERS-29fd0a77d6ef4e65ba66af7865ed6ce2"
                   target="__blank"
                 >
                   로지브라더스
