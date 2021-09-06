@@ -60,6 +60,7 @@ const SidebarBlock = styled.div`
   right: ${(props) => (props.sidebar ? "0%" : "-85%")};
   transition: right 0.5s ease-out;
   overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 const CloseBtn = styled.button`
