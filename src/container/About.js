@@ -6,9 +6,9 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { MdMail, MdCall } from "react-icons/md";
 import { FaUniversity } from "react-icons/fa";
-import { ImLink } from "react-icons/im";
 import image from "../assets/myphoto.jpg";
 import companyImg from "../assets/company.png";
+import blogImg from "../assets/blog.png";
 
 import { useMediaQuery } from 'react-responsive';
 
@@ -207,7 +207,7 @@ function About () {
           <ContentContainer>
             <li className="Velog" style={{ display: "flex" }}>
               <IconContainer>
-                <ImLink size="30" />
+                <img style={{ width: "30px" }} src={blogImg} alt="blog png" />
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>velog :</h5>
