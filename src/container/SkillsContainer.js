@@ -13,6 +13,7 @@ import reduxIcon from "../assets/redux.png";
 import pyIcon from "../assets/python.png";
 import fbIcon from "../assets/firebase.png";
 import sassIcon from "../assets/sass.png";
+import bsIcon from "../assets/bootstrap.png";
 
 function SkillsContainer () {
   const skills = [
@@ -24,7 +25,8 @@ function SkillsContainer () {
     { name: "Sass", icon: sassIcon },
     { name: "React", icon: reactIcon },
     { name: "Redux", icon: reduxIcon },
-    { name: "styled components", icon: scIcon },
+    { name: "styled-components", icon: scIcon },
+    { name: "Bootstrap", icon: bsIcon },
     { name: "Git", icon: gitIcon },
     { name: "Python", icon: pyIcon },
     { name: "Firebase", icon: fbIcon },
