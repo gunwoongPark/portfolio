@@ -34,8 +34,10 @@ function ProjectContainer () {
       info: `금오공과대학교 컴퓨터공학과 학술 동아리 셈틀꾼 공식 홈페이지 구현
       프로젝트 공고, 게시, 질문 페이지 등을 구현
       관리자 페이지를 통한 인원관리 구현
-      
-      (유지 보수 중...)`,
+      (유지 보수 중...)
+
+      역할 : 프론트 엔드 개발
+      `,
       tag: ["Vue", "Vuex", "Vuetify", "Express.js", "MongoDB"],
       image: [
         semtle1,
@@ -62,6 +64,8 @@ function ProjectContainer () {
       Tensorflow.js를 활용하여 이미지 객체 탐지를 통한 자동 태깅 기능
       OpenWeather API를 활용하여 실시간 현위치 날씨 정보
       Google Firebase를 적극 활용
+
+      역할 : 프론트 엔드 개발
       `,
       tag: [
         "Vue",
@@ -84,6 +88,8 @@ function ProjectContainer () {
       메뉴판을 촬영하여 사용자가 알고 싶은 메뉴를 직접 Cropping
       해당 음식에 들어가는 식자재 정보를 제공
       정보를 공유할 수 있는 간단한 커뮤니티
+
+      역할 : 프론트 엔드 개발, 웹 크롤링
       `,
       tag: [
         "React",

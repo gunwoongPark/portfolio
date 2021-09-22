@@ -1,26 +1,29 @@
 import React from "react";
 import Skills from "../components/Skills";
 
-import reactIcon from "../assets/react.png";
-import vueIcon from "../assets/vue.png";
-import htmlIcon from "../assets/html.png";
-import cssIcon from "../assets/css.png";
-import jsIcon from "../assets/js.png";
-import vuetifyIcon from "../assets/vuetify.svg";
-import scIcon from "../assets/styled-components.png";
-import gitIcon from "../assets/git.png";
-import reduxIcon from "../assets/redux.png";
-import pyIcon from "../assets/python.png";
-import fbIcon from "../assets/firebase.png";
-import sassIcon from "../assets/sass.png";
-import bsIcon from "../assets/bootstrap.png";
+import reactIcon from "../assets/skills/react.png";
+import vueIcon from "../assets/skills/vue.png";
+import htmlIcon from "../assets/skills/html.png";
+import cssIcon from "../assets/skills/css.png";
+import jsIcon from "../assets/skills/js.png";
+import vuetifyIcon from "../assets/skills/vuetify.svg";
+import scIcon from "../assets/skills/styled-components.png";
+import gitIcon from "../assets/skills/git.png";
+import reduxIcon from "../assets/skills/redux.png";
+import pyIcon from "../assets/skills/python.png";
+import fbIcon from "../assets/skills/firebase.png";
+import sassIcon from "../assets/skills/sass.png";
+import bsIcon from "../assets/skills/bootstrap.png";
+import wpIcon from "../assets/skills/webpack.png";
 
 function SkillsContainer () {
   const skills = [
     { name: "HTML", icon: htmlIcon },
     { name: "CSS", icon: cssIcon },
     { name: "JavaScript", icon: jsIcon },
+    { name: 'Webpack', icon: wpIcon },
     { name: "Vue", icon: vueIcon },
+    { name: 'Nuxt.js', icon: 'https://develop365.gitlab.io/nuxtjs-0.10.7-doc/ko/logos/nuxt-square.svg' },
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "Sass", icon: sassIcon },
     { name: "React", icon: reactIcon },
