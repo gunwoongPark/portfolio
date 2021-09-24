@@ -34,11 +34,10 @@ function ProjectContainer () {
       info: `금오공과대학교 컴퓨터공학과 학술 동아리 셈틀꾼 공식 홈페이지 구현
       프로젝트 공고, 게시, 질문 페이지 등을 구현
       관리자 페이지를 통한 인원관리 구현
-      (유지 보수 중...)
 
       역할 : 프론트 엔드 개발
       `,
-      tag: ["Vue", "Vuex", "Vuetify", "Express.js", "MongoDB"],
+      tag: ["Vue", "Vuex", "Vuetify", "Express", "MongoDB"],
       image: [
         semtle1,
         semtle2,
@@ -52,8 +51,9 @@ function ProjectContainer () {
         semtle10,
       ],
       url: "http://sbmi.iptime.org/",
-      git: "https://github.com/gunwoongPark/semtleProject-front",
+      git: "https://github.com/semtlekkun/semtleProject-front",
       mode: "web",
+      role: ['프론트 엔드 개발']
     },
 
     {
@@ -79,6 +79,7 @@ function ProjectContainer () {
       url: "https://vueticky-note-b08f1.web.app/",
       git: "https://github.com/gunwoongPark/Vueticky-Note",
       mode: "web",
+      role: ['프론트 엔드 개발']
     },
 
     {
@@ -105,8 +106,9 @@ function ProjectContainer () {
       ],
       image: [ycde1, ycde2, ycde3, ycde4, ycde5, ycde6],
       url: "https://watsin-3b4e3.web.app/",
-      git: "https://github.com/gunwoongPark/You_can_do_EAT",
+      git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
       mode: "app",
+      role: ['프론트 엔드 개발', '웹 크롤링']
     },
   ];
 

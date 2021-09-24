@@ -23,7 +23,7 @@ function SkillsContainer () {
     { name: "JavaScript", icon: jsIcon },
     { name: 'Webpack', icon: wpIcon },
     { name: "Vue", icon: vueIcon },
-    { name: 'Nuxt.js', icon: 'https://develop365.gitlab.io/nuxtjs-0.10.7-doc/ko/logos/nuxt-square.svg' },
+    { name: 'Nuxt', icon: 'https://develop365.gitlab.io/nuxtjs-0.10.7-doc/ko/logos/nuxt-square.svg' },
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "Sass", icon: sassIcon },
     { name: "React", icon: reactIcon },
