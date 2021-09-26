@@ -7,6 +7,84 @@ import { VscLinkExternal } from "react-icons/vsc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+function ProjectPresenter ({ projects, mode }) {
+  let settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+  };
+  return (
+    <>
+      <hr />
+      <CustomContainer id="Project">
+        <Row className="mt-5 title">
+          <Col>
+            <h1 style={{ fontSize: "45px" }}>
+              <P>P</P>roject
+            </h1>
+          </Col>
+        </Row>
+
+        {projects.map((project, index) => (
+          <Row className="mt-5 mb-5" key={index}>
+            <Col>
+              <ProjectContainer mode={mode}>
+                <CarouselContainer className="mb-3 ">
+                  <Slider {...settings}>
+                    {project.image.map((img, index) => (
+                      <CarouselItem className="mt-3" key={index}>
+                        <ProjectImage src={img} mode={project.mode} />
+                      </CarouselItem>
+                    ))}
+                  </Slider>
+                </CarouselContainer>
+
+                <ProjectInfo>
+                  <ProjectName mode={mode}>{project.name}</ProjectName>
+                  <ProjectContents mode={mode}>{project.info}</ProjectContents>
+
+
+                  <RoleContainer mode={mode}>
+                    {project.role.map((role, index) => (
+                      <ProjectRole key={index} mode={mode}>
+                        {role}
+                      </ProjectRole>
+                    ))}
+                  </RoleContainer>
+
+                  <TagContainer mode={mode}>
+                    {project.tag.map((tag, index) => (
+                      <ProjectTag key={index} mode={mode}>
+                        {tag}
+                      </ProjectTag>
+                    ))}
+                  </TagContainer>
+
+                  <LinkBtnGroup>
+                    <a href={project.git} target="__blank">
+                      <LinkBtn>
+                        <SiGithub size="30" />
+                      </LinkBtn>
+                    </a>
+                    <a href={project.url} target="__blank">
+                      <LinkBtn>
+                        <VscLinkExternal size="30" />
+                      </LinkBtn>
+                    </a>
+                  </LinkBtnGroup>
+                </ProjectInfo>
+              </ProjectContainer>
+            </Col>
+          </Row>
+        ))}
+      </CustomContainer>
+    </>
+  );
+}
+
 const CustomContainer = styled(Container)`
   padding-top: 90px;
   margin-top: 30px;
@@ -57,6 +135,7 @@ const ProjectName = styled.h1`
 `;
 
 const ProjectContents = styled.pre`
+  overflow: hidden;
   ${(props) =>
     props.mode === "isPc"
       ? css`
@@ -66,7 +145,74 @@ const ProjectContents = styled.pre`
           font-size: 15px;
         `}
   white-space: pre-wrap;
+  margin-bottom:2.5rem;
 `;
+
+const RoleContainer = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:2.5rem;
+
+  &::before{
+    ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          font-size: 20px;
+        `
+      : css`
+          font-size: 15px;
+        `}
+        content:'Role :';
+        margin-right:0.5rem;
+        font-weight: bold;
+  }
+`
+
+const ProjectRole = styled.p`
+   ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          font-size: 20px;
+        `
+      : css`
+          font-size: 15px;
+        `}
+  background:#e9ecef;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom:0;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  font-weight: bold;
+`
+
+const TagContainer = styled.div`
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin-bottom:2.5rem;
+  align-items:center;
+
+  &::before{
+    ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          font-size: 20px;
+        `
+      : css`
+          font-size: 15px;
+        `}
+        content:'Stack :';
+        margin-right:0.5rem;
+        font-weight: bold;
+  }
+`
 
 const ProjectTag = styled.p`
   ${(props) =>
@@ -82,11 +228,7 @@ const ProjectTag = styled.p`
   padding: 0 0.5rem 0 0.5rem;
   white-space: nowrap;
   display: inline-block;
-
-  & + & {
-    margin-left: 1rem;
-  }
-
+  margin:0.5rem;
   font-weight: bold;
 `;
 
@@ -116,72 +258,5 @@ const LinkBtn = styled.button`
     filter: brightness(80%);
   }
 `;
-
-function ProjectPresenter({ projects, mode }) {
-  let settings = {
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false,
-  };
-  return (
-    <>
-      <hr />
-      <CustomContainer id="Project">
-        <Row className="mt-5 title">
-          <Col>
-            <h1 style={{ fontSize: "45px" }}>
-              <P>P</P>roject
-            </h1>
-          </Col>
-        </Row>
-
-        {projects.map((project, index) => (
-          <Row className="mt-5 mb-5" key={index}>
-            <Col>
-              <ProjectContainer mode={mode}>
-                <CarouselContainer className="mb-3 ">
-                  <Slider {...settings}>
-                    {project.image.map((img, index) => (
-                      <CarouselItem className="mt-3" key={index}>
-                        <ProjectImage src={img} mode={project.mode} />
-                      </CarouselItem>
-                    ))}
-                  </Slider>
-                </CarouselContainer>
-
-                <ProjectInfo>
-                  <ProjectName mode={mode}>{project.name}</ProjectName>
-                  <ProjectContents mode={mode}>{project.info}</ProjectContents>
-
-                  {project.tag.map((tag, index) => (
-                    <ProjectTag key={index} mode={mode}>
-                      {tag}
-                    </ProjectTag>
-                  ))}
-
-                  <LinkBtnGroup>
-                    <a href={project.git} target="__blank">
-                      <LinkBtn>
-                        <SiGithub size="30" />
-                      </LinkBtn>
-                    </a>
-                    <a href={project.url} target="__blank">
-                      <LinkBtn>
-                        <VscLinkExternal size="30" />
-                      </LinkBtn>
-                    </a>
-                  </LinkBtnGroup>
-                </ProjectInfo>
-              </ProjectContainer>
-            </Col>
-          </Row>
-        ))}
-      </CustomContainer>
-    </>
-  );
-}
 
 export default ProjectPresenter;

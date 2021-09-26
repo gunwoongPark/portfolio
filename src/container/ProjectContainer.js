@@ -32,11 +32,8 @@ function ProjectContainer () {
       id: 1,
       name: "셈틀꾼 공식 홈페이지 구현",
       info: `금오공과대학교 컴퓨터공학과 학술 동아리 셈틀꾼 공식 홈페이지 구현
-      프로젝트 공고, 게시, 질문 페이지 등을 구현
-      관리자 페이지를 통한 인원관리 구현
-
-      역할 : 프론트 엔드 개발
-      `,
+      프로젝트 공고, 게시, 질문, 사진 페이지 등을 구현
+      관리자 페이지를 통한 인원관리 구현`,
       tag: ["Vue", "Vuex", "Vuetify", "Express", "MongoDB"],
       image: [
         semtle1,
@@ -53,7 +50,7 @@ function ProjectContainer () {
       url: "http://sbmi.iptime.org/",
       git: "https://github.com/semtlekkun/semtleProject-front",
       mode: "web",
-      role: ['프론트 엔드 개발']
+      role: ['Front-end']
     },
 
     {
@@ -63,10 +60,7 @@ function ProjectContainer () {
       노트와 인공지능을 결합한 노트 웹앱을 구현함
       Tensorflow.js를 활용하여 이미지 객체 탐지를 통한 자동 태깅 기능
       OpenWeather API를 활용하여 실시간 현위치 날씨 정보
-      Google Firebase를 적극 활용
-
-      역할 : 프론트 엔드 개발
-      `,
+      Google Firebase를 적극 활용`,
       tag: [
         "Vue",
         "Vuex",
@@ -79,7 +73,7 @@ function ProjectContainer () {
       url: "https://vueticky-note-b08f1.web.app/",
       git: "https://github.com/gunwoongPark/Vueticky-Note",
       mode: "web",
-      role: ['프론트 엔드 개발']
+      role: ['Front-end']
     },
 
     {
@@ -88,10 +82,7 @@ function ProjectContainer () {
       info: `외국인을 대상으로한 음식 식자재 정보 제공 웹앱 구현
       메뉴판을 촬영하여 사용자가 알고 싶은 메뉴를 직접 Cropping
       해당 음식에 들어가는 식자재 정보를 제공
-      정보를 공유할 수 있는 간단한 커뮤니티
-
-      역할 : 프론트 엔드 개발, 웹 크롤링
-      `,
+      정보를 공유할 수 있는 간단한 커뮤니티`,
       tag: [
         "React",
         "Styled Components",
@@ -108,7 +99,7 @@ function ProjectContainer () {
       url: "https://watsin-3b4e3.web.app/",
       git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
       mode: "app",
-      role: ['프론트 엔드 개발', '웹 크롤링']
+      role: ['Front-end', 'Web Crawling']
     },
   ];
 
