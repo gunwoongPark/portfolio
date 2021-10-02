@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { useMediaQuery } from "react-responsive";
 
-function HeaderContainer({ sidebar, setSidebar }) {
+function HeaderContainer ({ sidebar, setSidebar }) {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
@@ -41,6 +41,7 @@ function HeaderContainer({ sidebar, setSidebar }) {
   // mouse scroll event useEffect
   useEffect(() => {
     window.addEventListener("scroll", () => setPos(window.scrollY));
+    return () => { window.removeEventListener("scroll", () => setPos) };
   }, []);
 
   // browser resize event useEffect
