@@ -5,6 +5,65 @@ import { MdTimeline } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
 import TimelineContainer from "../container/TimelineContainer";
 
+import timelineIcon from "../assets/timeline-icon.png";
+
+function HeaderPresenter ({
+  Home,
+  About,
+  Skills,
+  Project,
+  pos,
+  mode,
+  open,
+  toggleHamburger,
+  sidebar,
+  setSidebar,
+}) {
+  return (
+    <>
+      <TimelineContainer sidebar={sidebar} setSidebar={setSidebar} />
+
+      <HeaderContainer pos={pos} mode={mode}>
+        <Title mode={mode}>
+          gunwoong<P>P</P>ark
+        </Title>
+
+        <HamburgerBtn mode={mode} onClick={toggleHamburger}>
+          {!open ? <GiHamburgerMenu size="24" /> : <GrClose size="24" />}
+        </HamburgerBtn>
+
+        <Cover mode={mode} />
+
+        <LinkContainer mode={mode} open={open}>
+          <LinkBtn mode={mode} current={pos <= Home.bottom}>
+            <LinkItem href="#Home">Home</LinkItem>
+          </LinkBtn>
+          <LinkBtn
+            mode={mode}
+            current={pos >= About.top && pos <= About.bottom}
+          >
+            <LinkItem href="#About">About</LinkItem>
+          </LinkBtn>
+          <LinkBtn
+            mode={mode}
+            current={pos >= Skills.top && pos <= Skills.bottom}
+          >
+            <LinkItem href="#Skills">Skills</LinkItem>
+          </LinkBtn>
+          <LinkBtn mode={mode} current={pos >= Project.top}>
+            <LinkItem href="#Project">Project</LinkItem>
+          </LinkBtn>
+
+          <TimelineBtn onClick={() => setSidebar(true)} mode={mode}>
+            <img src={timelineIcon} alt="timeline icon" style={{ width: '30px' }} />
+          </TimelineBtn>
+
+        </LinkContainer>
+      </HeaderContainer>
+    </>
+  );
+}
+
 const HeaderContainer = styled.div`
   background: white;
   position: fixed;
@@ -170,61 +229,5 @@ const Cover = styled.div`
       z-index: 0;
     `}
 `;
-
-function HeaderPresenter({
-  Home,
-  About,
-  Skills,
-  Project,
-  pos,
-  mode,
-  open,
-  toggleHamburger,
-  sidebar,
-  setSidebar,
-}) {
-  return (
-    <>
-      <TimelineContainer sidebar={sidebar} setSidebar={setSidebar} />
-
-      <HeaderContainer pos={pos} mode={mode}>
-        <Title mode={mode}>
-          gunwoong<P>P</P>ark
-        </Title>
-
-        <HamburgerBtn mode={mode} onClick={toggleHamburger}>
-          {!open ? <GiHamburgerMenu size="24" /> : <GrClose size="24" />}
-        </HamburgerBtn>
-
-        <Cover mode={mode} />
-
-        <LinkContainer mode={mode} open={open}>
-          <LinkBtn mode={mode} current={pos <= Home.bottom}>
-            <LinkItem href="#Home">Home</LinkItem>
-          </LinkBtn>
-          <LinkBtn
-            mode={mode}
-            current={pos >= About.top && pos <= About.bottom}
-          >
-            <LinkItem href="#About">About</LinkItem>
-          </LinkBtn>
-          <LinkBtn
-            mode={mode}
-            current={pos >= Skills.top && pos <= Skills.bottom}
-          >
-            <LinkItem href="#Skills">Skills</LinkItem>
-          </LinkBtn>
-          <LinkBtn mode={mode} current={pos >= Project.top}>
-            <LinkItem href="#Project">Project</LinkItem>
-          </LinkBtn>
-
-          <TimelineBtn onClick={() => setSidebar(true)} mode={mode}>
-            <MdTimeline size="30" />
-          </TimelineBtn>
-        </LinkContainer>
-      </HeaderContainer>
-    </>
-  );
-}
 
 export default HeaderPresenter;
