@@ -94,16 +94,22 @@ const Image = styled.div`
 `;
 
 const Contents = styled.h1`
-  font-size: ${(props) => (props.mode === "isPc" ? "88px" : "36px")};
+  font-size: ${(props) => (props.mode === "isPc" ? "56px" : "36px")};
   color:white;
   text-align:${(props) => (props.pos === 'rightBot' ? "right" : "")};
-  margin:${(props) => (props.pos === 'leftTop' ? '105px 0 0 1rem' : '0 1rem 40px 0')};
+
+  ${(props) => props.mode === 'isPc' && props.pos === 'leftTop' ? css`margin: 315px 0 0 25rem` : null};
+  ${(props) => props.mode === 'isPc' && props.pos === 'rightBot' ? css`margin: 0 25rem 260px 0` : null};
+
+  ${(props) => props.mode === 'isMobile' && props.pos === 'leftTop' ? css`margin: 215px 0 0 2rem` : null};
+  ${(props) => props.mode === 'isMobile' && props.pos === 'rightBot' ? css`margin: 0 2rem 160px 0` : null};
+
   display:inline-flex;
   justify-content: ${(props) => (props.pos === "rightBot" ? 'end' : "")};
 `;
 
 const Quotes = styled.h1`
-  font-size: ${(props) => (props.mode === "isPc" ? "72px" : "32px")};
+  font-size: ${(props) => (props.mode === "isPc" ? "48px" : "32px")};
   white-space: pre-line;
   text-align:center;
   color:white;
@@ -112,6 +118,9 @@ const Quotes = styled.h1`
   top:50%;
   transform: translate(-50%, -50%);
   width:100%;
+  margin:0;
+
+  margin-top:25px;
 
   transition:opacity 0.5s ease-out;
 
