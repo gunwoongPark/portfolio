@@ -117,7 +117,7 @@ function TimelineContainer ({ sidebar, setSidebar }) {
 
     {
       id: 12,
-      date: "2021.07 - present",
+      date: "2021.07 - 2021.08",
       title: "Semtle Project Renewal",
       content: "셈틀꾼 홈페이지 리뉴얼 및 유지보수 작업",
       category: "project",
