@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./container/HeaderContainer";
 import Footer from "./container/Footer";
 import Home from "./container/Home";
@@ -9,6 +9,32 @@ import Project from "./container/ProjectContainer";
 import { createGlobalStyle, css } from "styled-components";
 
 import "./App.css";
+
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
+function App () {
+  const [sidebar, setSidebar] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <>
+      <GlobalStyle sidebar={sidebar} />
+      <Header sidebar={sidebar} setSidebar={setSidebar} />
+      <Home id="Home" />
+      <About id="About" />
+      <Skills id="Skills" />
+      <Project id="Project" />
+      <Footer />
+    </>
+  );
+}
 
 const GlobalStyle = createGlobalStyle`
 
@@ -42,20 +68,5 @@ body::-webkit-scrollbar{
   display:none;
 }
 `;
-
-function App() {
-  const [sidebar, setSidebar] = useState(false);
-  return (
-    <>
-      <GlobalStyle sidebar={sidebar} />
-      <Header sidebar={sidebar} setSidebar={setSidebar} />
-      <Home id="Home" />
-      <About id="About" />
-      <Skills id="Skills" />
-      <Project id="Project" />
-      <Footer />
-    </>
-  );
-}
 
 export default App;

@@ -27,14 +27,14 @@ const NameContainer = styled.div`
   justify-content: center;
 `;
 
-function SkillsPresenter({ skills }) {
+function SkillsPresenter ({ skills }) {
   return (
     <>
       <hr />
       <CustomContainer id="Skills">
         <Row className="mt-5 title">
           <Col>
-            <h1 style={{ fontSize: "45px" }}>
+            <h1 data-aos="fade-right" style={{ fontSize: "45px" }}>
               <S>S</S>kills
             </h1>
           </Col>

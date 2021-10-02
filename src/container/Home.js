@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import jumbImg from "../assets/jumbotron.jpg";
 import { useMediaQuery } from "react-responsive";
 
@@ -54,7 +54,15 @@ function Home () {
         <Image>
           <Contents pos={'leftTop'} mode={mode}>안녕하세요! 저는</Contents>
           {
-            mode === "isPc" ? <Quotes mode={mode}>'{quotes[quotesCnt]}'</Quotes> : <Quotes mode={mode}>'{mobileQuotes[quotesCnt]}'</Quotes>
+            mode === "isPc" ?
+
+              quotes.map((quote, index) => (
+                <Quotes stat={index === quotesCnt ? 'active' : 'hide'} mode={mode}>'{quote}'</Quotes>
+              ))
+              :
+              mobileQuotes.map((quote, index) => (
+                <Quotes stat={index === quotesCnt ? 'active' : 'hide'} mode={mode}>'{quote}'</Quotes>
+              ))
           }
           <Contents pos={'rightBot'} mode={mode}>
             개발자입니다.
@@ -99,6 +107,15 @@ const Quotes = styled.h1`
   white-space: pre-line;
   text-align:center;
   color:white;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+
+  transition:opacity 0.5s ease-out;
+
+  ${(props) => (props.stat === "active" ? css`display:inline-block; opacity: 1` : css`opacity:0;`)}
 `
 
 export default Home;

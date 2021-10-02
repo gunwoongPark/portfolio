@@ -12,59 +12,6 @@ import blogImg from "../assets/blog.png";
 
 import { useMediaQuery } from 'react-responsive';
 
-const CustomContainer = styled(Container)`
-  padding-top: 90px;
-  margin-top: 30px;
-  padding-bottom: 70px;
-`;
-
-const Portrait = styled.img`
-  object-fit: cover;
-  border-radius: 50%;
-  ${(props) => props.mode === "isPc" ? css`width:500px;` : css`width:350px;`};
-`;
-
-const ContentContainer = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-`;
-
-const IconContainer = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const PhotoContainer = styled.div`
-  text-align: center;
-  align-self: center;
-`;
-
-const IntroduceText = styled.p`
-  text-align: center;
-  font-size: 20px;
-`;
-
-const A = styled.h1`
-  font-weight: bold;
-  color: #000080;
-  display: inline;
-  font-size: 45px;
-  text-decoration: underline;
-  text-decoration-color: #000080;
-`;
-
-const Anchor = styled.a`
-  margin: 0;
-  font-size: 17px;
-  color: black;
-
-  &:hover {
-    color: black;
-  }
-`;
-
 function About () {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
@@ -84,7 +31,7 @@ function About () {
     <CustomContainer id="About">
       <Row className="mt-5 title">
         <Col>
-          <h1 style={{ fontSize: "45px" }}>
+          <h1 data-aos="fade-right" style={{ fontSize: "45px" }}>
             <A>A</A>bout
           </h1>
         </Col>
@@ -239,5 +186,58 @@ function About () {
     </CustomContainer>
   );
 }
+
+const CustomContainer = styled(Container)`
+  padding-top: 90px;
+  margin-top: 30px;
+  padding-bottom: 70px;
+`;
+
+const Portrait = styled.img`
+  object-fit: cover;
+  border-radius: 50%;
+  ${(props) => props.mode === "isPc" ? css`width:500px;` : css`width:350px;`};
+`;
+
+const ContentContainer = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+`;
+
+const IconContainer = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PhotoContainer = styled.div`
+  text-align: center;
+  align-self: center;
+`;
+
+const IntroduceText = styled.p`
+  text-align: center;
+  font-size: 20px;
+`;
+
+const A = styled.h1`
+  font-weight: bold;
+  color: #000080;
+  display: inline;
+  font-size: 45px;
+  text-decoration: underline;
+  text-decoration-color: #000080;
+`;
+
+const Anchor = styled.a`
+  margin: 0;
+  font-size: 17px;
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+`;
 
 export default About;
