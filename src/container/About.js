@@ -31,9 +31,9 @@ function About () {
     <CustomContainer id="About">
       <Row className="mt-5 title">
         <Col>
-          <h1 data-aos="fade-right" style={{ fontSize: "45px" }}>
+          <Title data-aos="fade-right" mode={mode}>
             <A>A</A>bout
-          </h1>
+          </Title>
         </Col>
       </Row>
 
@@ -192,6 +192,11 @@ const CustomContainer = styled(Container)`
   margin-top: 30px;
   padding-bottom: 70px;
 `;
+
+const Title = styled.h1`
+  font-size:45px;
+  ${(props) => props.mode === "isPc" ? css`` : css`text-align:center`}
+`
 
 const Portrait = styled.img`
   object-fit: cover;

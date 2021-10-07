@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdTimeline } from "react-icons/md";
 import { GrClose } from "react-icons/gr";
 import TimelineContainer from "../container/TimelineContainer";
 

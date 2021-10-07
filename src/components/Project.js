@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import Slider from "react-slick";
@@ -6,8 +6,23 @@ import { SiGithub } from "react-icons/si";
 import { VscLinkExternal } from "react-icons/vsc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useMediaQuery } from 'react-responsive';
 
 function ProjectPresenter ({ projects, mode }) {
+  const isPc = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
+  const [screen, setScreen] = useState("");
+
+  useEffect(() => {
+    if (isPc) setScreen("isPc");
+    else if (isMobile) setScreen("isMobile");
+  }, [isMobile, isPc])
+
   let settings = {
     dots: true,
     slidesToShow: 1,
@@ -22,9 +37,9 @@ function ProjectPresenter ({ projects, mode }) {
       <CustomContainer id="Project">
         <Row className="mt-5 title">
           <Col>
-            <h1 data-aos="fade-right" style={{ fontSize: "45px" }}>
+            <Title data-aos="fade-right" screen={screen}>
               <P>P</P>roject
-            </h1>
+            </Title>
           </Col>
         </Row>
 
@@ -89,6 +104,11 @@ const CustomContainer = styled(Container)`
   padding-top: 90px;
   margin-top: 30px;
 `;
+
+const Title = styled.h1`
+  font-size:45px;
+  ${(props) => props.screen === "isPc" ? css`` : css`text-align:center`}
+`
 
 const ProjectContainer = styled.div`
   text-align: center;
