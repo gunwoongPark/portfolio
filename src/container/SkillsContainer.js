@@ -6,6 +6,7 @@ import vueIcon from "../assets/skills/vue.png";
 import htmlIcon from "../assets/skills/html.png";
 import cssIcon from "../assets/skills/css.png";
 import jsIcon from "../assets/skills/js.png";
+import tsIcon from "../assets/skills/typescript.png";
 import vuetifyIcon from "../assets/skills/vuetify.svg";
 import scIcon from "../assets/skills/styled-components.png";
 import gitIcon from "../assets/skills/git.png";
@@ -16,14 +17,18 @@ import sassIcon from "../assets/skills/sass.png";
 import bsIcon from "../assets/skills/bootstrap.png";
 import wpIcon from "../assets/skills/webpack.png";
 
-function SkillsContainer () {
+function SkillsContainer() {
   const skills = [
     { name: "HTML", icon: htmlIcon },
     { name: "CSS", icon: cssIcon },
     { name: "JavaScript", icon: jsIcon },
-    { name: 'Webpack', icon: wpIcon },
+    { name: "TypeScript", icon: tsIcon },
+    { name: "Webpack", icon: wpIcon },
     { name: "Vue", icon: vueIcon },
-    { name: 'Nuxt', icon: 'https://develop365.gitlab.io/nuxtjs-0.10.7-doc/ko/logos/nuxt-square.svg' },
+    {
+      name: "Nuxt",
+      icon: "https://develop365.gitlab.io/nuxtjs-0.10.7-doc/ko/logos/nuxt-square.svg",
+    },
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "Sass", icon: sassIcon },
     { name: "React", icon: reactIcon },
