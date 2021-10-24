@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.5394a2c0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.5394a2c0.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.0f1b213d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.0f1b213d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.c1472de1.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.c1472de1.js.map",
     "static/css/2.54f8cac0.chunk.css": "/portfolio/static/css/2.54f8cac0.chunk.css",
@@ -45,6 +45,7 @@
     "static/media/slick-theme.css": "/portfolio/static/media/slick.c94f7671.ttf",
     "static/media/styled-components.76b9df72.png": "/portfolio/static/media/styled-components.76b9df72.png",
     "static/media/timeline-icon.73d4cc84.png": "/portfolio/static/media/timeline-icon.73d4cc84.png",
+    "static/media/typescript.8fe41361.png": "/portfolio/static/media/typescript.8fe41361.png",
     "static/media/vue.c5e19801.png": "/portfolio/static/media/vue.c5e19801.png",
     "static/media/vueticky1.9cc1e16a.png": "/portfolio/static/media/vueticky1.9cc1e16a.png",
     "static/media/vueticky2.710b8ea8.png": "/portfolio/static/media/vueticky2.710b8ea8.png",
@@ -59,6 +60,6 @@
     "static/css/2.54f8cac0.chunk.css",
     "static/js/2.30b840c4.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.5394a2c0.chunk.js"
+    "static/js/main.0f1b213d.chunk.js"
   ]
 }
