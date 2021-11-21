@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4a226dc.chunk.css",
-    "main.js": "/portfolio/static/js/main.0f1b213d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0f1b213d.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.9f1834f5.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.9f1834f5.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.c1472de1.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.c1472de1.js.map",
     "static/css/2.54f8cac0.chunk.css": "/portfolio/static/css/2.54f8cac0.chunk.css",
@@ -25,6 +25,7 @@
     "static/media/jumbotron.b2f3b330.jpg": "/portfolio/static/media/jumbotron.b2f3b330.jpg",
     "static/media/main.839f8a3e.jpg": "/portfolio/static/media/main.839f8a3e.jpg",
     "static/media/myphoto.17af38e1.jpg": "/portfolio/static/media/myphoto.17af38e1.jpg",
+    "static/media/next.bfb23e82.svg": "/portfolio/static/media/next.bfb23e82.svg",
     "static/media/python.d8b377f0.png": "/portfolio/static/media/python.d8b377f0.png",
     "static/media/react.b37f0a4b.png": "/portfolio/static/media/react.b37f0a4b.png",
     "static/media/redux.7fec6369.png": "/portfolio/static/media/redux.7fec6369.png",
@@ -60,6 +61,6 @@
     "static/css/2.54f8cac0.chunk.css",
     "static/js/2.30b840c4.chunk.js",
     "static/css/main.d4a226dc.chunk.css",
-    "static/js/main.0f1b213d.chunk.js"
+    "static/js/main.9f1834f5.chunk.js"
   ]
 }
