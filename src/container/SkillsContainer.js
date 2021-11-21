@@ -16,6 +16,7 @@ import fbIcon from "../assets/skills/firebase.png";
 import sassIcon from "../assets/skills/sass.png";
 import bsIcon from "../assets/skills/bootstrap.png";
 import wpIcon from "../assets/skills/webpack.png";
+import nextIcon from "../assets/skills/next.svg";
 
 function SkillsContainer() {
   const skills = [
@@ -32,6 +33,10 @@ function SkillsContainer() {
     { name: "Vuetify", icon: vuetifyIcon },
     { name: "Sass", icon: sassIcon },
     { name: "React", icon: reactIcon },
+    {
+      name: "Next",
+      icon: nextIcon,
+    },
     { name: "Redux", icon: reduxIcon },
     { name: "styled-components", icon: scIcon },
     { name: "Bootstrap", icon: bsIcon },
