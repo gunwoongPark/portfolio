@@ -10,9 +10,9 @@ import image from "../assets/myphoto.jpg";
 import companyImg from "../assets/company.png";
 import blogImg from "../assets/blog.png";
 
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 
-function About () {
+function About() {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
@@ -25,7 +25,7 @@ function About () {
   useEffect(() => {
     if (isPc) setMode("isPc");
     else if (isMobile) setMode("isMobile");
-  }, [isMobile, isPc])
+  }, [isMobile, isPc]);
 
   return (
     <CustomContainer id="About">
@@ -101,16 +101,20 @@ function About () {
           <ContentContainer>
             <li className="Company" style={{ display: "flex" }}>
               <IconContainer>
-                <img style={{ width: "30px" }} src={companyImg} alt="company png" />
+                <img
+                  style={{ width: "30px" }}
+                  src={companyImg}
+                  alt="company png"
+                />
               </IconContainer>
               <div style={{ marginLeft: "24px" }}>
                 <h5 style={{ margin: "0" }}>Company :</h5>
                 <Anchor
                   style={{ margin: "0", fontSize: "17px" }}
-                  href="https://thewaytosunset.notion.site/thewaytosunset/We-Are-LOGI-BROTHERS-29fd0a77d6ef4e65ba66af7865ed6ce2"
+                  href="http://www.prefinc.com/main/index"
                   target="__blank"
                 >
-                  로지브라더스
+                  PREF
                 </Anchor>
               </div>
             </li>
@@ -172,17 +176,21 @@ function About () {
       </Row>
       <Row className="mt-5 mb-5">
         <Col style={{ textAlign: "center" }}>
-          <h4 style={{ fontWeight: 'bold', marginBottom: '1rem' }}>꾸준히 성장하는 주니어 개발자</h4>
+          <h4 style={{ fontWeight: "bold", marginBottom: "1rem" }}>
+            꾸준히 성장하는 주니어 개발자
+          </h4>
           <IntroduceText>
-            눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 유능한 프론트 엔드 개발자가 되기 위해 쉬지 않고 배우고 있습니다.
+            눈앞에 보이는 웹을 구현하는 것에 흥미를 느껴 유능한 프론트 엔드
+            개발자가 되기 위해 쉬지 않고 배우고 있습니다.
             <br />
-            빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가 되기 위해 항상 노력하고 있습니다.
+            빠르게 변화하는 트렌드와 발전하는 기술에 적응하는 더 좋은 개발자가
+            되기 위해 항상 노력하고 있습니다.
             <br />
-            열정과 끈기가 있는 개발자입니다. 저에 대해 궁금하신 점이 있다면, 위의 주소로 연락해주세요!
+            열정과 끈기가 있는 개발자입니다. 저에 대해 궁금하신 점이 있다면,
+            위의 주소로 연락해주세요!
           </IntroduceText>
         </Col>
       </Row>
-
     </CustomContainer>
   );
 }
@@ -194,14 +202,26 @@ const CustomContainer = styled(Container)`
 `;
 
 const Title = styled.h1`
-  font-size:45px;
-  ${(props) => props.mode === "isPc" ? css`` : css`text-align:center`}
-`
+  font-size: 45px;
+  ${(props) =>
+    props.mode === "isPc"
+      ? css``
+      : css`
+          text-align: center;
+        `}
+`;
 
 const Portrait = styled.img`
   object-fit: cover;
   border-radius: 50%;
-  ${(props) => props.mode === "isPc" ? css`width:500px;` : css`width:350px;`};
+  ${(props) =>
+    props.mode === "isPc"
+      ? css`
+          width: 500px;
+        `
+      : css`
+          width: 350px;
+        `};
 `;
 
 const ContentContainer = styled.ul`

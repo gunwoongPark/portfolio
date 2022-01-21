@@ -3,7 +3,7 @@ import Timeline from "../components/Timeline";
 
 import { useMediaQuery } from "react-responsive";
 
-function TimelineContainer ({ sidebar, setSidebar }) {
+function TimelineContainer({ sidebar, setSidebar }) {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
@@ -65,7 +65,7 @@ function TimelineContainer ({ sidebar, setSidebar }) {
 
     {
       id: 6,
-      date: "2020.10 - present",
+      date: "2020.10 - 2022.02",
       title: "System Software Lab",
       content: "시스템 소프트웨어 연구실 연구원 활동",
       category: "lab",
@@ -108,15 +108,6 @@ function TimelineContainer ({ sidebar, setSidebar }) {
 
     {
       id: 11,
-      date: "2021.07 - present",
-      title: "Cytoscape dev-blog Project",
-      content:
-        "Velog의 게시글들을 연동하여 그래프 형식으로 나타내는 개인 기술 블로그 구현 프로젝트 진행",
-      category: "project",
-    },
-
-    {
-      id: 12,
       date: "2021.07 - 2021.08",
       title: "Semtle Project Renewal",
       content: "셈틀꾼 홈페이지 리뉴얼 및 유지보수 작업",
@@ -124,10 +115,18 @@ function TimelineContainer ({ sidebar, setSidebar }) {
     },
 
     {
-      id: 13,
-      date: "2021.07 - present",
+      id: 12,
+      date: "2021.07 - 2021.12",
       title: "로지브라더스",
-      content: "스타트업 로지브라더스 프론트 엔드 개발 업무",
+      content: "로지브라더스 프론트 엔드 개발 업무",
+      category: "company",
+    },
+
+    {
+      id: 13,
+      date: "2021.12 - present",
+      title: "PREF",
+      content: "PREF 프론트 엔드 개발 업무",
       category: "company",
     },
   ];
