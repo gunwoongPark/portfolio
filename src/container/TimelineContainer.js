@@ -108,14 +108,6 @@ function TimelineContainer({ sidebar, setSidebar }) {
 
     {
       id: 11,
-      date: "2021.07 - 2021.08",
-      title: "Semtle Project Renewal",
-      content: "셈틀꾼 홈페이지 리뉴얼 및 유지보수 작업",
-      category: "project",
-    },
-
-    {
-      id: 12,
       date: "2021.07 - 2021.12",
       title: "로지브라더스",
       content: "로지브라더스 프론트 엔드 개발 업무",
@@ -123,7 +115,7 @@ function TimelineContainer({ sidebar, setSidebar }) {
     },
 
     {
-      id: 13,
+      id: 12,
       date: "2021.12 - present",
       title: "PREF",
       content: "PREF 프론트 엔드 개발 업무",
