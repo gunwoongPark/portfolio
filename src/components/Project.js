@@ -6,9 +6,9 @@ import { SiGithub } from "react-icons/si";
 import { VscLinkExternal } from "react-icons/vsc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 
-function ProjectPresenter ({ projects, mode }) {
+function ProjectPresenter({ projects, mode }) {
   const isPc = useMediaQuery({
     query: "(min-width:768px)",
   });
@@ -21,7 +21,7 @@ function ProjectPresenter ({ projects, mode }) {
   useEffect(() => {
     if (isPc) setScreen("isPc");
     else if (isMobile) setScreen("isMobile");
-  }, [isMobile, isPc])
+  }, [isMobile, isPc]);
 
   let settings = {
     dots: true,
@@ -61,7 +61,6 @@ function ProjectPresenter ({ projects, mode }) {
                   <ProjectName mode={mode}>{project.name}</ProjectName>
                   <ProjectContents mode={mode}>{project.info}</ProjectContents>
 
-
                   <RoleContainer mode={mode}>
                     {project.role.map((role, index) => (
                       <ProjectRole key={index} mode={mode}>
@@ -84,11 +83,6 @@ function ProjectPresenter ({ projects, mode }) {
                         <SiGithub size="30" />
                       </LinkBtn>
                     </a>
-                    <a href={project.url} target="__blank">
-                      <LinkBtn>
-                        <VscLinkExternal size="30" />
-                      </LinkBtn>
-                    </a>
                   </LinkBtnGroup>
                 </ProjectInfo>
               </ProjectContainer>
@@ -106,9 +100,14 @@ const CustomContainer = styled(Container)`
 `;
 
 const Title = styled.h1`
-  font-size:45px;
-  ${(props) => props.screen === "isPc" ? css`` : css`text-align:center`}
-`
+  font-size: 45px;
+  ${(props) =>
+    props.screen === "isPc"
+      ? css``
+      : css`
+          text-align: center;
+        `}
+`;
 
 const ProjectContainer = styled.div`
   text-align: center;
@@ -165,32 +164,32 @@ const ProjectContents = styled.pre`
           font-size: 15px;
         `}
   white-space: pre-wrap;
-  margin-bottom:2.5rem;
+  margin-bottom: 2.5rem;
 `;
 
 const RoleContainer = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom:2.5rem;
+  margin-bottom: 2.5rem;
 
-  &::before{
+  &::before {
     ${(props) =>
-    props.mode === "isPc"
-      ? css`
-          font-size: 20px;
-        `
-      : css`
-          font-size: 15px;
-        `}
-        content:'Role :';
-        margin-right:0.5rem;
-        font-weight: bold;
+      props.mode === "isPc"
+        ? css`
+            font-size: 20px;
+          `
+        : css`
+            font-size: 15px;
+          `}
+    content:'Role :';
+    margin-right: 0.5rem;
+    font-weight: bold;
   }
-`
+`;
 
 const ProjectRole = styled.p`
-   ${(props) =>
+  ${(props) =>
     props.mode === "isPc"
       ? css`
           font-size: 20px;
@@ -203,36 +202,36 @@ const ProjectRole = styled.p`
   padding: 0 0.5rem 0 0.5rem;
   white-space: nowrap;
   display: inline-block;
-  margin-bottom:0;
+  margin-bottom: 0;
 
   & + & {
     margin-left: 1rem;
   }
 
   font-weight: bold;
-`
+`;
 
 const TagContainer = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
-  flex-wrap:wrap;
-  margin-bottom:2.5rem;
-  align-items:center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  align-items: center;
 
-  &::before{
+  &::before {
     ${(props) =>
-    props.mode === "isPc"
-      ? css`
-          font-size: 20px;
-        `
-      : css`
-          font-size: 15px;
-        `}
-        content:'Stack :';
-        margin-right:0.5rem;
-        font-weight: bold;
+      props.mode === "isPc"
+        ? css`
+            font-size: 20px;
+          `
+        : css`
+            font-size: 15px;
+          `}
+    content:'Stack :';
+    margin-right: 0.5rem;
+    font-weight: bold;
   }
-`
+`;
 
 const ProjectTag = styled.p`
   ${(props) =>
@@ -248,7 +247,7 @@ const ProjectTag = styled.p`
   padding: 0 0.5rem 0 0.5rem;
   white-space: nowrap;
   display: inline-block;
-  margin:0.5rem;
+  margin: 0.5rem;
   font-weight: bold;
 `;
 

@@ -26,7 +26,7 @@ import ycde4 from "../assets/youcandoeat/cropping.jpg";
 import ycde5 from "../assets/youcandoeat/result.jpg";
 import ycde6 from "../assets/youcandoeat/community.jpg";
 
-function ProjectContainer () {
+function ProjectContainer() {
   const projects = [
     {
       id: 1,
@@ -47,10 +47,9 @@ function ProjectContainer () {
         semtle9,
         semtle10,
       ],
-      url: "http://sbmi.iptime.org/",
       git: "https://github.com/semtlekkun/semtleProject-front",
       mode: "web",
-      role: ['Front-end']
+      role: ["Front-end"],
     },
 
     {
@@ -70,10 +69,9 @@ function ProjectContainer () {
         "Firebase",
       ],
       image: [vueticky1, vueticky2, vueticky3, vueticky4, vueticky5],
-      url: "https://vueticky-note-b08f1.web.app/",
       git: "https://github.com/gunwoongPark/Vueticky-Note",
       mode: "web",
-      role: ['Front-end']
+      role: ["Front-end"],
     },
 
     {
@@ -96,10 +94,9 @@ function ProjectContainer () {
         "Naver Papago API",
       ],
       image: [ycde1, ycde2, ycde3, ycde4, ycde5, ycde6],
-      url: "https://watsin-3b4e3.web.app/",
       git: "https://github.com/HwangYoonSeong/You_can_do_EAT",
       mode: "app",
-      role: ['Front-end', 'Web Crawling']
+      role: ["Front-end", "Web Crawling"],
     },
   ];
 
